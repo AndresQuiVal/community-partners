@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Título de la Página</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id="google-fonts-1-css"
+        href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.4.3"
+        media="all">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #121212;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1c1c1c 0%, #363636 100%);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img.logo {
+            width: 150px;
+        }
+
+        .hero {
+            background: linear-gradient(to bottom, #333 0%, #1a1a1a 100%);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            margin-bottom: 40px;
+        }
+
+        /* .schedule {
+            background: white;
+            text-align: center;
+            color: black;
+            padding: 50px 20px;
+        } */
+
+        /* .schedule {
+            background-image: url('images/community-image.png'); 
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: black;
+            padding: 50px 20px;
+            filter: opacity(20%); 
+        } */
+
+        .schedule {
+            position: relative; /* Necesario para posicionar correctamente el pseudo-elemento */
+            background-image: url('images/community-image.png'); /* Ajusta este path a tu imagen */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: black;
+            padding: 50px 20px;
+            overflow: hidden; /* Para manejar cualquier desbordamiento del pseudo-elemento */
+        }
+
+.schedule::before {
+    content: ''; /* Necesario para generar el elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Color blanco con opacidad */
+    z-index: 0; /* Se sitúa detrás del contenido */
+}
+
+/* Asegura que el contenido de .schedule esté encima de la capa ::before */
+.schedule * {
+    position: relative;
+    z-index: 1;
+}
+
+
+        .schedule h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .schedule p {
+            margin-bottom: 40px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .highlight-yellow {
+            color: #ffd700;
+        }
+
+        .highlight-blue {
+            color: #00bfff;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .quote {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #e600e6;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .btn-yellow {
+            background-color: yellow;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: #ff1aff;
+        }
+
+        .notice {
+            font-size: 0.9em;
+        }
+
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .pricing-option {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-title {
+            color: #333;
+            background-color: #e6f0ff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .price {
+            color: #333;
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        .price span {
+            font-size: 1em;
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .order-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 960px) {
+            .pricing-table {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-option {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            background: #121212;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1c1c1c 0%, #363636 100%);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+
+
+        .hero {
+            background: linear-gradient(to bottom, #333 0%, #1a1a1a 100%);
+            animation: fadeIn 2s;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 70px 20px;
+        }
+
+        .content-left {
+            width: 20%;
+            /* Ajusta según tus necesidades */
+        }
+
+        .video-container {
+            width: 80%;
+            /* Ajusta según tus necesidades */
+            padding-left: 20px;
+            /* Asegura un poco de espacio entre los textos y el video */
+        }
+
+        .video-container iframe {
+            width: 100%;
+            /* Asegura que el iframe tome todo el espacio del contenedor */
+            height: 300px;
+            /* Ajusta la altura según tus necesidades */
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+
+        th {
+            background-color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 50px 0;
+        }
+
+        .pricing-option {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-option:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+        }
+
+        .story {
+            background-image: url('images/chris_port.png');
+            /* Ajusta la URL según tu estructura de archivos */
+            background-size: cover;
+            background-position: right center;
+            background-repeat: no-repeat;
+            padding: 40px;
+            /* Cambia el color del texto si es necesario */
+        }
+
+        .info-systems {
+            background: linear-gradient(to bottom, #333 0%, #1a1a1a 100%);
+            /* Ajusta la URL según tu estructura de archivos */
+            background-size: cover;
+            background-position: right center;
+            background-repeat: no-repeat;
+            padding: 40px;
+            /* Cambia el color del texto si es necesario */
+        }
+
+        .content-chris {
+            color: black;
+            padding: 20px;
+        }
+
+        .texts {
+            display: flex;
+            justify-content: space-between; /* Alinea los elementos a los extremos opuestos del contenedor */
+        }
+
+        .left-column, .right-column {
+            width: 50%; /* Asegura que cada columna use la mitad del ancho del contenedor */
+        }
+
+
+
+
+        .negocio-poder {
+    padding: 50px; /* Ajustar el padding según sea necesario */
+    color: black;
+}
+
+.negocio-poder h1 {
+    color: yellow; /* Ajustar el color según sea necesario */
+    margin-bottom: 20px;
+}
+
+.negocio-poder p {
+    margin-bottom: 15px;
+}
+
+.contenido-central {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px; /* Ajustar el margen superior según sea necesario */
+}
+
+.bloque {
+    width: 30%; /* Ajustar el ancho según sea necesario */
+}
+
+.bloque img {
+    max-width: 100px; /* Ajustar tamaño de imagen según sea necesario */
+    margin-bottom: 20px;
+}
+
+.bloque h2 {
+    color: #fddc01; /* Ajustar el color según sea necesario */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.call-to-action {
+    background-color: yellow; /* Ajustar el color de fondo según sea necesario */
+    color: black;
+    padding: 20px;
+    margin-top: 40px; /* Ajustar el margen superior según sea necesario */
+    font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .contenido-central {
+        flex-direction: column;
+    }
+
+    .bloque {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+.oferta {
+    text-align: center; /* Centrar el título */
+    padding: 20px;
+}
+
+.paquete-oferta {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    justify-content: space-around; /* Espacio alrededor del contenido */
+    background-color: #1e1e1e; /* Color de fondo del contenedor */
+}
+
+.contenido-visual {
+    flex-basis: 50%; /* Asumiendo que la imagen y la lista ocuparán la mitad del espacio cada una */
+}
+
+.contenido-visual img {
+    max-width: 100%; /* La imagen ocupa todo el espacio disponible */
+    height: auto; /* Para mantener la relación de aspecto */
+}
+
+.descripcion {
+    flex-basis: 50%; /* Asumiendo que la imagen y la lista ocuparán la mitad del espacio cada una */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.descripcion h2 {
+    color: #ff6a00; /* Color para el título del paquete de oferta */
+    margin-bottom: 10px;
+}
+
+.descripcion p {
+    margin-bottom: 20px;
+}
+
+.descripcion ul {
+    list-style: none; /* Eliminar viñetas de la lista */
+    padding: 0;
+}
+
+.descripcion li {
+    margin-bottom: 10px; /* Espacio entre los ítems de la lista */
+}
+
+/* Puedes necesitar media queries para manejar la responsividad */
+@media (max-width: 768px) {
+    .paquete-oferta {
+        flex-direction: column; /* Los elementos se apilan verticalmente en pantallas pequeñas */
+    }
+
+    .contenido-visual, .descripcion {
+        flex-basis: 100%; /* Cada elemento ocupa el ancho completo */
+    }
+}
+
+.comparativa-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.columna {
+    width: 50%; /* Ajusta el ancho según necesites */
+    text-align: center; /* Centra el texto y el contenido */
+    padding: 10px;
+    height: 20%;
+}
+
+.columna img {
+    width: 100%; /* Asegura que la imagen sea responsiva */
+    margin-bottom: 10px;
+}
+
+.datos {
+    background-color: #000; /* Fondo para el área de datos */
+    padding: 10px;
+    margin-bottom: 10px; /* Espacio antes del texto adicional */
+}
+
+/* Puedes agregar estilos adicionales para el texto adicional aquí */
+.columna p {
+    font-size: 14px; /* Ajusta el tamaño de fuente según prefieras */
+    color: #ccc; /* Ajusta el color del texto adicional */
+}
+
+
+
+.promesa {
+    position: relative; /* Necesario para posicionar correctamente el pseudo-elemento */
+    background-image: url('images/chris_portrait.png'); /* Ajusta este path a tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.promesa::before {
+    content: ''; /* Necesario para generar el elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9); /* Color blanco con opacidad */
+    z-index: 0; /* Se sitúa detrás del contenido */
+}
+
+.promesa * {
+    position: relative;
+    z-index: 1;
+}
+
+.texto-promesa {
+    color: black;
+    flex: 1;
+    padding-right: 20px; /* Ajusta el espaciado según sea necesario */
+}
+
+.imagen-promesa {
+    flex: 1;
+}
+
+.imagen-promesa img {
+    width: 100%; /* Ajusta el ancho de la imagen según sea necesario */
+    display: block; /* Asegúrate de que la imagen no tenga espacio extra alrededor */
+    max-width: 600px; /* O el tamaño máximo que prefieras */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+h1 {
+    color: #000; /* O el color que prefieras */
+    margin-bottom: 20px; /* Ajusta el espaciado según sea necesario */
+}
+
+.contenido-central p {
+    color: white; /* O el color que prefieras */
+    margin-bottom: 10px; /* Ajusta el espaciado según sea necesario */
+}
+
+ul {
+    list-style: none; /* Remueve las viñetas */
+    padding: 0;
+    margin-bottom: 20px; /* Ajusta el espaciado según sea necesario */
+}
+
+li {
+    margin-bottom: 10px; /* Ajusta el espaciado entre los ítems de la lista */
+}
+
+li strong {
+    color: #000; /* O el color que prefieras */
+}
+
+/* Agrega tus propias media queries para hacer la página responsiva */
+@media (max-width: 768px) {
+    .promesa {
+        flex-direction: column;
+    }
+    .texto-promesa, .imagen-promesa {
+        flex: none;
+        width: 100%;
+        padding-right: 0;
+    }
+    .imagen-promesa img {
+        max-width: 100%; /* Permite que la imagen sea completamente responsiva */
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./com-logo.png" alt="Logo" class="logo" style="width: 200px;">
+    </header>
+
+    <section class="hero">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="padding: 20px;">
+            <h1 style="color: white;"><span style="color: yellow;">NO COMPRES</span>  MÁS CURSOS..</h1>
+            <h2>MEJOR CREA UNA COMUNIDAD MILLONARIA Y… ESCALA TUS VENTAS CON TU PROPIO ESPACIO DIGITAL</h2>
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn-yellow" style="margin-right: 20px;">Si Quiero Crear mi Comunidad
+                Millonaria y obtener mis primeros 10k
+            </button>
+            <button>
+        </div>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/938893029?h=ca19d99b8b&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="promesa">
+        <div class="texto-promesa">
+            <h1>MI PROMESA PARA TI:</h1>
+            <ul>
+                <li>No te venderé un curso, ese te lo regalo en la suscripción de la plataforma en solo $79 USD por mes.</li>
+                <li>Te daré acceso a seguimiento para que puedas pulir tus productos y servicios digitales y no te quedes atorado 1 año como me pasó a mí.</li>
+                <li>Aprenderás cómo crear una marca personal y una oferta de valor irresistible.</li>
+                <li>Podrás conectarte con otros que pueden ayudarte y que sí... Tú también podrás ayudar.</li>
+            </ul>
+        </div>
+        <div class="imagen-promesa">
+            <!-- Asegúrate de reemplazar 'ruta-a-tu-imagen' con la ruta real de tu imagen -->
+            <img src="images/chris-people-bg.png" alt="Modelo de Negocio de Poder">
+        </div>
+    </section>
+    
+
+    <!-- <section class="story">
+        <div class="content-chris">
+            <h1 style="text-align: center; font-size: xx-large;">Soy Chris Pico, y estuve en tu lugar...</h1>
+            <br><br>
+            <div class="texts">
+                <div style="width: 50%;">
+                    
+                    <h1>Mi Promesa Para Ti</h1>
+                    <ul style="list-style-type: none;">
+                        <li style="letter-spacing: 3px;"><b>No te venderé</b> un curso, ese te lo regalo en la suscripción de la
+                            plataforma en solo $79 usd por mes.
+                        </li>
+                        <br>
+                        <li style="letter-spacing: 3px;"><b>Te daré acceso</b> a seguimiento para que puedas pulir tus productos
+                            y servicios digitales y no te quedes
+                            atorado 1 año como me pasó a mí.</li>
+                        <br>
+                        
+                    </ul>
+                
+                </div>
+                <div class="left-column"></div>
+                <div class="left-column"></div>
+    
+                <div class="right-column">
+                    
+                    <ul style="list-style-type: none;">
+                        <li style="letter-spacing: 3px;"><b>Aprenderás</b> cómo crear una marca personal y una oferta de valor
+                            irresistible.</li>
+                        <br>
+                        <li style="letter-spacing: 3px;"><b>Podrás conectarte con otros</b> que pueden ayudarte y que sí.. Tú
+                            también podrás ayudar!!</li>
+                    </ul>
+                
+                </div>
+            </div>
+        </div>
+
+    </section> -->
+
+    <!-- <section class="info-systems">
+        <br><br><br><br><br>
+        <h1 style="font-size: xxx-large; text-align: center;">Aplicar los sistemas adecuados, te llevan a facturar lo antes posible...</h1>
+        <img src="">
+        <div class="texts" style="padding: 10px; margin: 10px; ">
+            <div style="width:40%;">
+                <img src="images/money-1.png" style="max-height: 40%;">
+            </div>
+            <div style="width: 10%;"></div>
+            <div style="width: 40%;">
+                <img src="images/money-2.png" style="max-height: 40%;">
+            </div>
+        </div>
+        <div class="texts">
+            <div style="width: 50%;">
+                
+                <h1>Mi Promesa Para Ti</h1>
+                <ul style="list-style-type: none;">
+                    <li style="letter-spacing: 3px;"><b>No te venderé</b> un curso, ese te lo regalo en la suscripción de la
+                        plataforma en solo $79 usd por mes.
+                    </li>
+                    <br>
+                    <li style="letter-spacing: 3px;"><b>Te daré acceso</b> a seguimiento para que puedas pulir tus productos
+                        y servicios digitales y no te quedes
+                        atorado 1 año como me pasó a mí.</li>
+                    <br>
+                    
+                </ul>
+            
+            </div>
+
+            <div class="right-column">
+                
+                <ul style="list-style-type: none;">
+                    <li style="letter-spacing: 3px;"><b>Aprenderás</b> cómo crear una marca personal y una oferta de valor
+                        irresistible.</li>
+                    <br>
+                    <li style="letter-spacing: 3px;"><b>Podrás conectarte con otros</b> que pueden ayudarte y que sí.. Tú
+                        también podrás ayudar!!</li>
+                </ul>
+            
+            </div>
+        </div>
+        <br><br><br><br><br>
+
+    </section> -->
+    <br>
+        
+        <br>
+        <br>
+        <br>
+    <h1 style="color: white; text-align: center;">Lleva tu negocio digital a facturar de <span style="color: yellow;">esta manera</span></h1>
+
+    <div class="comparativa-container">
+        <br>
+        <br>
+        
+        
+        <div class="columna">
+            <br>
+            <!-- Asumiendo que las gráficas son imágenes -->
+            <img src="images/money-fac-1.png" alt="Antes" style="max-height: 20%;">
+            <div class="datos">
+                <p>Total de Ingresos</p>
+                <p>USD$ 6,707.82</p>
+            </div>
+            <p>Texto adicional aquí...</p>
+        </div>
+        <div class="columna">
+            <br>
+            <!-- Asumiendo que las gráficas son imágenes -->
+            <img src="images/money-fac-2.png" alt="Después" style="max-height: 20%;">
+            <div class="datos">
+                <p>Total de Ingresos</p>
+                <p>USD$ 1,812,516.96</p>
+            </div>
+            <p>Texto adicional aquí...</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <section class="oferta">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 style="color: white;">EN QUÉ NOS ENFOCAREMOS...</h1>
+        <div class="paquete-oferta">
+            <div class="contenido-visual">
+                <!-- Asumiendo que las imágenes de los productos están en una carpeta llamada "img" -->
+                <img src="images/com-millinarios.png" alt="Productos">
+            </div>
+            <div class="descripcion">
+                <h2>EL PROCESO PARA CREAR TU NEGOCIO DIGITAL</h2>
+                <ul>
+                    <li>🔴 Identificar tu Avatar: Entender quién es tu cliente ideal</li>
+                    <li>🔴 Probar el mercado: Validar la demanda de tu oferta</li>
+                    <li>🔴 Probar la oferta de valor: Asegurar que tu propuesta sea atractiva</li>
+                    <li>🔴 Crear tu primer contenido para redes: Generar interacción y visibilidad</li>
+                    <li>🔴 Crear video para embudo digital: Mejorar la conversión a ventas</li>
+                    <li>🔴 Diseñar tu producto digital: Desarrollar tu material vendible</li>
+                    <li>🔴 Diseñar tu embudo digital: Establecer un proceso de ventas efectivo</li>
+                    <li>🔴 Diseñar la estrategia de contenidos: Planificar tu comunicación online</li>
+                    <li>🔴 Diseñar regalo gratuito: Incentivar la suscripción a tu lista</li>
+                    <li>🔴 Diseñar los Correos electrónicos: Crear una secuencia que convierta</li>
+                    <li>🔴 Crear tu primer producto digital para cobrar $$$: Monetizar tu conocimiento</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule">
+        
+        <br>
+        <br>
+        <br>
+        <div class="pricing-table">
+            <div class="pricing-option">
+                <h2 class="pricing-title">Starter</h2>
+                <div class="price">$79 <span>/ mes</span></div>
+                <ul class="pricing-features">
+                    <li>2 Ofertas Digitales</li>
+                    <li>2 Cursos + 5 lecciones c/u</li>
+                    <li>100 miembros en comunidad</li>
+                    <li>Embudo digital</li>
+                    <li>3 canales de discusión</li>
+                </ul>
+                <a href="https://hubee.app/hubee-creators/community" class="order-btn">Comprar</a>
+            </div>
+            <div class="pricing-option" style="background-color: yellow;">
+                <h2 class="pricing-title">Master</h2>
+                <div class="price">$111 <span>/ único pago</span></div>
+                <ul class="pricing-features">
+                    <li>100 Ofertas Digitales</li>
+                    <li>100 Cursos + lecciones ilimitadas</li>
+                    <li>Miembros ilimitados en comunidad</li>
+                    <li>1 Embudo digital + upsells</li>
+                    <li>50 canales de discusión</li>
+                </ul>
+                <a href="https://hubee.app/index.php?route=product/product&product_id=159" class="order-btn">Comprar</a>
+            </div>
+            <div class="pricing-option">
+                <h2 class="pricing-title">Elite</h2>
+                <div class="price">$222 <span>/ único pago</span></div>
+                <ul class="pricing-features">
+                    <li>Todo del Plan Creador</li>
+                    <li>Llamadas semanales grupales</li>
+                    <li>Soporte exclusivo</li>
+                    <li>Descuento 50% en eventos</li>
+                </ul>
+                <a href="https://hubee.app/index.php?route=product/product&product_id=157" class="order-btn">Comprar</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="negocio-poder" style="color: white;">
+        <h1>BIENVENIDO A TU COMUNIDAD MILLONARIA</h1>
+        <p>El primer programa de hablahispana que te llevará a construir intencionalmente un negocio en internet para hacer dinero con principios comprobados.</p>
+        <p>¡Te quiero ayudar a construir una "máquina de hacer dinero"!</p>
+        <div class="contenido-central">
+            <div class="bloque">
+                <h2 style="text-align: center; font-size: 500%">👷‍♂️</h2>
+                <h2>Construir</h2>
+                <p>Generando tus primeros 100,000 dólares... ¡vas a poder servir muchísimo mejor!</p>
+                <p>¡Aprende a convertir tu historia, tus talentos o tu hobby en un negocio rentable 🌐 en línea!</p>
+                <p><b>BONUS</b> Recibes las metodologías exactas de como Chris logró facturar con su producto digital!</p>
+            
+            </div>
+            <div class="bloque">
+                <h2 style="text-align: center; font-size: 500%">📈</h2>
+                <h2>Escalar</h2>
+                <p>Comenzar a atraer personas interesadas en tu producto digital</p>
+                <p>Agendaremos citas de venta para tu producto desde Instagram</p>
+                <p><b>BONUS</b> Recibes un software de prospección masiva y automatizada para tu producto!</p>
+            </div>
+            <div class="bloque">
+                <h2 style="text-align: center; font-size: 500%">💸</h2>
+                <h2>Generar</h2>
+                <p>Escalar tu negocio a 10,000 USD con tu oferta.</p>
+                <p>Crearemos contenido estratégico que hará crecer las ventas de tu producto digital</p>
+                <p><b>BONUS</b>Recibes las estratégias de contenido que usamos en @chrisbranders.croc para facturar $24,301 USD/mes</p>
+            </div>
+        </div>
+        <div class="call-to-action">
+            <p>¡Aprende a convertir tu historia, tus talentos o tu hobby en un negocio próspero 🌐 en línea!</p>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <p>Communitypartners | Chris Branders 2024 todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>
