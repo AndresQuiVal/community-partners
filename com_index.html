@@ -465,13 +465,11 @@
 
         .negocio-poder {
             padding: 50px;
-            /* Ajustar el padding según sea necesario */
             color: black;
         }
 
         .negocio-poder h1 {
             color: yellow;
-            /* Ajustar el color según sea necesario */
             margin-bottom: 20px;
         }
 
@@ -484,26 +482,76 @@
             display: flex;
             justify-content: space-around;
             margin-top: 50px;
-            /* Ajustar el margen superior según sea necesario */
         }
 
         .bloque {
             width: 30%;
-            /* Ajustar el ancho según sea necesario */
         }
 
         .bloque img {
             max-width: 100px;
-            /* Ajustar tamaño de imagen según sea necesario */
             margin-bottom: 20px;
         }
 
         .bloque h2 {
             color: #fddc01;
-            /* Ajustar el color según sea necesario */
             text-transform: uppercase;
             margin-bottom: 10px;
         }
+
+        .negocio-poder-partner {
+  position: relative; /* Esto es necesario para posicionar el div de fondo */
+  padding: 50px;
+  color: black;
+  /* Asegúrate de que tu imagen de fondo esté correctamente referenciada en la URL */
+  background: url('images/chris-andres.png') no-repeat center center;
+  background-size: cover;
+}
+
+.negocio-poder-partner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Aquí ajustas el color de fondo y la opacidad que deseas para la imagen de fondo */
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.negocio-poder-partner  h1 {
+  color: yellow;
+  margin-bottom: 20px;
+}
+
+.negocio-poder-partner  p {
+  margin-bottom: 15px;
+}
+
+.contenido-central-partner  {
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.bloque-part {
+  width: 30%;
+}
+
+.bloque-part img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.bloque-part h2 {
+  color: #fddc01;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
 
         .bloque-partner {
             width: 100%;
@@ -1093,8 +1141,8 @@
         </div>
     </section>
 
-    <section class="negocio-poder" style="color: white;">
-        <h1 style="text-align: center; font-size: xx-large; color: white;">¿Cómo se ve el <span
+    <section class="negocio-poder-partner" style="color: white;">
+        <h1 style="text-align: center; font-size: xx-large; color: black;">¿Cómo se ve el <span
                 style="background-color: yellow; color: black; padding: 5px; border-radius: 5px;">equipo ideal</span>?
         </h1>
         <!-- <p>El primer programa de hablahispana que te llevará a construir intencionalmente un negocio en internet para
@@ -1103,8 +1151,9 @@
         <div class="contenido-central">
             <div class="bloque-partner">
                 <h2 style="text-align: center; font-size: 500%">👨‍💻</h2>
-                <h2>Creador <span style="text-decoration: underline;">(ESTE ERES TÚ)</span></h2>
-                <ul>
+                <h2 style="color: black;">Creador <span style="text-decoration: underline;">(ESTE ERES TÚ)</span></h2>
+                <ul style="color: black; font-weight: bold; font-size: 1.2em;"">
+                    <br>
                     <li>👊 Planificas contenido</li>
                     <li>👊 Creas contenido</li>
                     <li>👊 Publicas contenido</li>
@@ -1116,9 +1165,10 @@
                 <h2 style="text-align: center; font-size: 500%" class="rotate">⚙️</h2>
             </div>
             <div class="bloque-partner">
-                <h2 style="text-align: center; font-size: 500%">👷</h2>
-                <h2>PARTNER <span style="text-decoration: underline;">(LO QUE NECESITAS)</span></h2>
-                <ul>
+                <h2 style="text-align: center; font-size: 500%;">👷</h2>
+                <h2 style="color: black;">PARTNER <span style="text-decoration: underline;">(LO QUE NECESITAS)</span></h2>
+                <ul style="color: black; font-weight: bold; font-size: 1.2em;">
+                    <br>
                     <li>👊 Edita contenido</li>
                     <li>👊 Crea la página web de tu producto</li>
                     <li>👊 Contacta prospectos</li>
