@@ -67,32 +67,38 @@
         } */
 
         .schedule {
-            position: relative; /* Necesario para posicionar correctamente el pseudo-elemento */
-            background-image: url('images/community-image.png'); /* Ajusta este path a tu imagen */
+            position: relative;
+            /* Necesario para posicionar correctamente el pseudo-elemento */
+            background-image: url('images/community-image.png');
+            /* Ajusta este path a tu imagen */
             background-size: cover;
             background-position: center;
             text-align: center;
             color: black;
             padding: 50px 20px;
-            overflow: hidden; /* Para manejar cualquier desbordamiento del pseudo-elemento */
+            overflow: hidden;
+            /* Para manejar cualquier desbordamiento del pseudo-elemento */
         }
 
-.schedule::before {
-    content: ''; /* Necesario para generar el elemento */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.5); /* Color blanco con opacidad */
-    z-index: 0; /* Se sitúa detrás del contenido */
-}
+        .schedule::before {
+            content: '';
+            /* Necesario para generar el elemento */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            /* Color blanco con opacidad */
+            z-index: 0;
+            /* Se sitúa detrás del contenido */
+        }
 
-/* Asegura que el contenido de .schedule esté encima de la capa ::before */
-.schedule * {
-    position: relative;
-    z-index: 1;
-}
+        /* Asegura que el contenido de .schedule esté encima de la capa ::before */
+        .schedule * {
+            position: relative;
+            z-index: 1;
+        }
 
 
         .schedule h1 {
@@ -268,7 +274,7 @@
             color: gray;
             background: linear-gradient(135deg, #d9ff00 0%, #d1e540 100%);
             text-decoration: underline;
-            
+
             padding: 10px 20px;
             border-radius: 5px;
             margin-top: 20px;
@@ -444,409 +450,584 @@
 
         .texts {
             display: flex;
-            justify-content: space-between; /* Alinea los elementos a los extremos opuestos del contenedor */
+            justify-content: space-between;
+            /* Alinea los elementos a los extremos opuestos del contenedor */
         }
 
-        .left-column, .right-column {
-            width: 50%; /* Asegura que cada columna use la mitad del ancho del contenedor */
+        .left-column,
+        .right-column {
+            width: 50%;
+            /* Asegura que cada columna use la mitad del ancho del contenedor */
         }
 
 
 
 
         .negocio-poder {
-    padding: 50px; /* Ajustar el padding según sea necesario */
-    color: black;
-}
-
-.negocio-poder h1 {
-    color: yellow; /* Ajustar el color según sea necesario */
-    margin-bottom: 20px;
-}
-
-.negocio-poder p {
-    margin-bottom: 15px;
-}
-
-.contenido-central {
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px; /* Ajustar el margen superior según sea necesario */
-}
-
-.bloque {
-    width: 30%; /* Ajustar el ancho según sea necesario */
-}
-
-.bloque img {
-    max-width: 100px; /* Ajustar tamaño de imagen según sea necesario */
-    margin-bottom: 20px;
-}
-
-.bloque h2 {
-    color: #fddc01; /* Ajustar el color según sea necesario */
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.call-to-action {
-    background-color: yellow; /* Ajustar el color de fondo según sea necesario */
-    color: black;
-    padding: 20px;
-    margin-top: 40px; /* Ajustar el margen superior según sea necesario */
-    font-weight: bold;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .contenido-central {
-        flex-direction: column;
-    }
-
-    .bloque {
-        width: 80%;
-        margin-bottom: 30px;
-    }
-}
-
-
-
-
-.oferta {
-    text-align: center; /* Centrar el título */
-    padding: 20px;
-}
-
-.paquete-oferta {
-    display: flex;
-    align-items: center; /* Alinear verticalmente */
-    justify-content: space-around; /* Espacio alrededor del contenido */
-    background-color: #1e1e1e; /* Color de fondo del contenedor */
-}
-
-.contenido-visual {
-    flex-basis: 50%; /* Asumiendo que la imagen y la lista ocuparán la mitad del espacio cada una */
-}
-
-.contenido-visual img {
-    max-width: 100%; /* La imagen ocupa todo el espacio disponible */
-    height: auto; /* Para mantener la relación de aspecto */
-}
-
-.descripcion {
-    flex-basis: 50%; /* Asumiendo que la imagen y la lista ocuparán la mitad del espacio cada una */
-    text-align: left; /* Alineación del texto a la izquierda */
-}
-
-.descripcion h2 {
-    color: #ff6a00; /* Color para el título del paquete de oferta */
-    margin-bottom: 10px;
-}
-
-.descripcion p {
-    margin-bottom: 20px;
-}
-
-.descripcion ul {
-    list-style: none; /* Eliminar viñetas de la lista */
-    padding: 0;
-}
-
-.descripcion li {
-    margin-bottom: 10px; /* Espacio entre los ítems de la lista */
-}
-
-/* Puedes necesitar media queries para manejar la responsividad */
-@media (max-width: 768px) {
-    .paquete-oferta {
-        flex-direction: column; /* Los elementos se apilan verticalmente en pantallas pequeñas */
-    }
-
-    .contenido-visual, .descripcion {
-        flex-basis: 100%; /* Cada elemento ocupa el ancho completo */
-    }
-}
-
-.comparativa-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    margin-top: 100px;
-}
-
-.columna {
-    width: 50%; /* Ajusta el ancho según necesites */
-    text-align: center; /* Centra el texto y el contenido */
-    padding: 10px;
-    height: 20%;
-}
-
-.columna img {
-    width: 100%; /* Asegura que la imagen sea responsiva */
-    margin-bottom: 10px;
-}
-
-.datos {
-    background-color: #000; /* Fondo para el área de datos */
-    padding: 10px;
-    margin-bottom: 10px; /* Espacio antes del texto adicional */
-}
-
-/* Puedes agregar estilos adicionales para el texto adicional aquí */
-.columna p {
-    font-size: 14px; /* Ajusta el tamaño de fuente según prefieras */
-    color: #ccc; /* Ajusta el color del texto adicional */
-}
-
-
-
-.promesa {
-    position: relative; /* Necesario para posicionar correctamente el pseudo-elemento */
-    background-image: url('images/chris_portrait.png'); /* Ajusta este path a tu imagen */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-}
-
-.promesa::before {
-    content: ''; /* Necesario para generar el elemento */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.9); /* Color blanco con opacidad */
-    z-index: 0; /* Se sitúa detrás del contenido */
-}
-
-.promesa * {
-    position: relative;
-    z-index: 1;
-}
-
-.texto-promesa {
-    color: black;
-    flex: 1;
-    padding-right: 20px; /* Ajusta el espaciado según sea necesario */
-}
-
-.imagen-promesa {
-    flex: 1;
-}
-
-.imagen-promesa img {
-    width: 100%; /* Ajusta el ancho de la imagen según sea necesario */
-    display: block; /* Asegúrate de que la imagen no tenga espacio extra alrededor */
-    max-width: 600px; /* O el tamaño máximo que prefieras */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-
-h1 {
-    color: #000; /* O el color que prefieras */
-    margin-bottom: 20px; /* Ajusta el espaciado según sea necesario */
-}
-
-.contenido-central p {
-    color: white; /* O el color que prefieras */
-    margin-bottom: 10px; /* Ajusta el espaciado según sea necesario */
-}
-
-ul {
-    list-style: none; /* Remueve las viñetas */
-    padding: 0;
-    margin-bottom: 20px; /* Ajusta el espaciado según sea necesario */
-}
-
-li {
-    margin-bottom: 10px; /* Ajusta el espaciado entre los ítems de la lista */
-}
-
-li strong {
-    color: #000; /* O el color que prefieras */
-}
-
-/* Agrega tus propias media queries para hacer la página responsiva */
-@media (max-width: 768px) {
-    .promesa {
-        flex-direction: column;
-    }
-    .texto-promesa, .imagen-promesa {
-        flex: none;
-        width: 100%;
-        padding-right: 0;
-    }
-    .imagen-promesa img {
-        max-width: 100%; /* Permite que la imagen sea completamente responsiva */
-    }
-}
-
-
-.pricing-section-custom {
-  background: url('images/community-image.png') no-repeat center center;
-  background-size: cover;
-  padding: 50px 0;
-}
-
-.pricing-container-custom {
-  max-width: 1200px; /* O el ancho máximo que prefieras */
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-}
-
-.pricing-box-custom {
-  background-color: rgba(255, 255, 255, 0.9); /* Blanco con opacidad para el fondo de la caja */
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px; /* O el ancho que prefieras */
-  position: relative; /* Para la posición absoluta del highlight-box */
-  z-index: 1;
-}
-
-.highlight-box {
-  background-color: #800080; /* Un morado genérico */
-  padding: 20px;
-  color: #ffffff; /* Color del texto en highlight-box */
-  text-align: center;
-  position: absolute;
-  top: -20px; /* Ajusta según sea necesario para que coincida con el diseño */
-  left: 50%;
-  transform: translateX(-50%); /* Centra la caja morada */
-  z-index: -1;
-}
-
-.benefits-list-custom {
-  list-style: none; /* Quita los bullets predeterminados */
-  padding: 0;
-  margin-top: 20px; /* Espacio por encima de la lista */
-}
-
-.benefits-list-custom li {
-  background: url('ruta/a/tu/icono.png') no-repeat left center; /* Icono personalizado */
-  padding-left: 30px; /* Asegúrate de dejar espacio para el icono */
-  margin-bottom: 15px;
-}
-
-/* Estilos adicionales y media queries según sea necesario */
-@media (max-width: 768px) {
-  .pricing-container-custom {
-    flex-direction: column;
-  }
-  
-  .pricing-box-custom {
-    width: auto; /* Cajas de precios se expanden en pantallas más pequeñas */
-    margin-bottom: 20px;
-  }
-
-  .highlight-box {
-    position: static;
-    transform: none;
-  }
-}
-
-
-.bonus-container {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    height: 10%;
-}
-
-.bonus-text {
-    flex: 0 0 auto; /* No crece, no se encoge y se basa en el ancho del contenido */
-    margin-right: 10px; /* Ajusta según necesites espacio para la línea */
-    position: relative; /* Para el posicionamiento absoluto del pseudo-elemento */
-    max-height: 10%;
-}
-
-.bonus-text::after {
-    content: ''; /* Pseudo-elemento para la línea */
-    display: block;
-    height: 2px; /* Altura de la línea */
-    background-color: white; /* Color de la línea */
-    flex-grow: 1; /* Ocupa el espacio restante */
-    margin-left: 0px; /* Espacio entre el texto y la línea */
-}
-
-
-
-
-
-.hero {
-    background: linear-gradient(to bottom, #333 0%, #1a1a1a 100%);
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.title {
-    font-size: 2.5rem;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.strikethrough {
-    color: yellow;
-    text-decoration: line-through;
-}
-
-.subtitle {
-    margin-bottom: 40px;
-}
-
-.btn-yellow {
-    background-color: yellow;
-    color: black;
-    margin-right: 20px;
-    text-decoration: underline;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.video-container {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    margin-left: 30px;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding: 20px;
-        display: block; /* Cambia la disposición a bloque en lugar de flex */
-    }
-
-    .content {
-        margin-bottom: 20px; /* Añade espacio entre el contenido y el vídeo */
-    }
-
-    .video-container {
-        /* Restablece el padding superior y establece la altura para ajustar el vídeo */
-        padding-top: 0;
-        height: auto;
-    }
-
-    .video-container iframe {
-        /* Coloca el vídeo debajo del contenido de texto */
-        position: relative;
-        width: 100%;
-        height: auto;
-        /* Asumiendo un aspecto de 16:9, calcula la altura basada en el ancho del vídeo */
-        padding-bottom: 56.25%;
-    }
-}
+            padding: 50px;
+            /* Ajustar el padding según sea necesario */
+            color: black;
+        }
+
+        .negocio-poder h1 {
+            color: yellow;
+            /* Ajustar el color según sea necesario */
+            margin-bottom: 20px;
+        }
+
+        .negocio-poder p {
+            margin-bottom: 15px;
+        }
+
+        .contenido-central {
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            /* Ajustar el margen superior según sea necesario */
+        }
+
+        .bloque {
+            width: 30%;
+            /* Ajustar el ancho según sea necesario */
+        }
+
+        .bloque img {
+            max-width: 100px;
+            /* Ajustar tamaño de imagen según sea necesario */
+            margin-bottom: 20px;
+        }
+
+        .bloque h2 {
+            color: #fddc01;
+            /* Ajustar el color según sea necesario */
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .bloque-partner {
+            width: 100%;
+            text-align: center;
+            /* Ajustar el ancho según sea necesario */
+        }
+
+        .bloque-partner img {
+            max-width: 100px;
+            /* Ajustar tamaño de imagen según sea necesario */
+            margin-bottom: 20px;
+        }
+
+        .bloque-partner h2 {
+            color: #fddc01;
+            /* Ajustar el color según sea necesario */
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .call-to-action {
+            background-color: yellow;
+            /* Ajustar el color de fondo según sea necesario */
+            color: black;
+            padding: 20px;
+            margin-top: 40px;
+            /* Ajustar el margen superior según sea necesario */
+            font-weight: bold;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .contenido-central {
+                flex-direction: column;
+            }
+
+            .bloque {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+        }
+
+
+
+
+        .oferta {
+            text-align: center;
+            /* Centrar el título */
+            padding: 20px;
+        }
+
+        .paquete-oferta {
+            display: flex;
+            align-items: center;
+            /* Alinear verticalmente */
+            justify-content: space-around;
+            /* Espacio alrededor del contenido */
+            background-color: #1e1e1e;
+            /* Color de fondo del contenedor */
+        }
+
+        .contenido-visual {
+            flex-basis: 50%;
+            /* Asumiendo que la imagen y la lista ocuparán la mitad del espacio cada una */
+        }
+
+        .contenido-visual img {
+            max-width: 100%;
+            /* La imagen ocupa todo el espacio disponible */
+            height: auto;
+            /* Para mantener la relación de aspecto */
+        }
+
+        .descripcion {
+            flex-basis: 50%;
+            /* Asumiendo que la imagen y la lista ocuparán la mitad del espacio cada una */
+            text-align: left;
+            /* Alineación del texto a la izquierda */
+        }
+
+        .descripcion h2 {
+            color: #ff6a00;
+            /* Color para el título del paquete de oferta */
+            margin-bottom: 10px;
+        }
+
+        .descripcion p {
+            margin-bottom: 20px;
+        }
+
+        .descripcion ul {
+            list-style: none;
+            /* Eliminar viñetas de la lista */
+            padding: 0;
+        }
+
+        .descripcion li {
+            margin-bottom: 10px;
+            /* Espacio entre los ítems de la lista */
+        }
+
+        /* Puedes necesitar media queries para manejar la responsividad */
+        @media (max-width: 768px) {
+            .paquete-oferta {
+                flex-direction: column;
+                /* Los elementos se apilan verticalmente en pantallas pequeñas */
+            }
+
+            .contenido-visual,
+            .descripcion {
+                flex-basis: 100%;
+                /* Cada elemento ocupa el ancho completo */
+            }
+        }
+
+        .comparativa-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 100px;
+        }
+
+        .columna {
+            width: 50%;
+            /* Ajusta el ancho según necesites */
+            text-align: center;
+            /* Centra el texto y el contenido */
+            padding: 10px;
+            height: 20%;
+        }
+
+        .columna img {
+            width: 100%;
+            /* Asegura que la imagen sea responsiva */
+            margin-bottom: 10px;
+        }
+
+        .datos {
+            background-color: #000;
+            /* Fondo para el área de datos */
+            padding: 10px;
+            margin-bottom: 10px;
+            /* Espacio antes del texto adicional */
+        }
+
+        /* Puedes agregar estilos adicionales para el texto adicional aquí */
+        .columna p {
+            font-size: 14px;
+            /* Ajusta el tamaño de fuente según prefieras */
+            color: #ccc;
+            /* Ajusta el color del texto adicional */
+        }
+
+
+
+        .promesa {
+            position: relative;
+            /* Necesario para posicionar correctamente el pseudo-elemento */
+            background-image: url('images/chris_portrait.png');
+            /* Ajusta este path a tu imagen */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .promesa::before {
+            content: '';
+            /* Necesario para generar el elemento */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            /* Color blanco con opacidad */
+            z-index: 0;
+            /* Se sitúa detrás del contenido */
+        }
+
+        .promesa * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .texto-promesa {
+            color: black;
+            flex: 1;
+            padding-right: 20px;
+            /* Ajusta el espaciado según sea necesario */
+        }
+
+        .imagen-promesa {
+            flex: 1;
+        }
+
+        .imagen-promesa img {
+            width: 100%;
+            /* Ajusta el ancho de la imagen según sea necesario */
+            display: block;
+            /* Asegúrate de que la imagen no tenga espacio extra alrededor */
+            max-width: 600px;
+            /* O el tamaño máximo que prefieras */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+        }
+
+        h1 {
+            color: #000;
+            /* O el color que prefieras */
+            margin-bottom: 20px;
+            /* Ajusta el espaciado según sea necesario */
+        }
+
+        .contenido-central p {
+            color: white;
+            /* O el color que prefieras */
+            margin-bottom: 10px;
+            /* Ajusta el espaciado según sea necesario */
+        }
+
+        ul {
+            list-style: none;
+            /* Remueve las viñetas */
+            padding: 0;
+            margin-bottom: 20px;
+            /* Ajusta el espaciado según sea necesario */
+        }
+
+        li {
+            margin-bottom: 10px;
+            /* Ajusta el espaciado entre los ítems de la lista */
+        }
+
+        li strong {
+            color: #000;
+            /* O el color que prefieras */
+        }
+
+        /* Agrega tus propias media queries para hacer la página responsiva */
+        @media (max-width: 768px) {
+            .promesa {
+                flex-direction: column;
+            }
+
+            .texto-promesa,
+            .imagen-promesa {
+                flex: none;
+                width: 100%;
+                padding-right: 0;
+            }
+
+            .imagen-promesa img {
+                max-width: 100%;
+                /* Permite que la imagen sea completamente responsiva */
+            }
+        }
+
+
+        .pricing-section-custom {
+            background: url('images/community-image.png') no-repeat center center;
+            background-size: cover;
+            padding: 50px 0;
+        }
+
+        .pricing-container-custom {
+            max-width: 1200px;
+            /* O el ancho máximo que prefieras */
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+        }
+
+        .pricing-box-custom {
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Blanco con opacidad para el fondo de la caja */
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            /* O el ancho que prefieras */
+            position: relative;
+            /* Para la posición absoluta del highlight-box */
+            z-index: 1;
+        }
+
+        .highlight-box {
+            background-color: #800080;
+            /* Un morado genérico */
+            padding: 20px;
+            color: #ffffff;
+            /* Color del texto en highlight-box */
+            text-align: center;
+            position: absolute;
+            top: -20px;
+            /* Ajusta según sea necesario para que coincida con el diseño */
+            left: 50%;
+            transform: translateX(-50%);
+            /* Centra la caja morada */
+            z-index: -1;
+        }
+
+        .benefits-list-custom {
+            list-style: none;
+            /* Quita los bullets predeterminados */
+            padding: 0;
+            margin-top: 20px;
+            /* Espacio por encima de la lista */
+        }
+
+        .benefits-list-custom li {
+            background: url('ruta/a/tu/icono.png') no-repeat left center;
+            /* Icono personalizado */
+            padding-left: 30px;
+            /* Asegúrate de dejar espacio para el icono */
+            margin-bottom: 15px;
+        }
+
+        /* Estilos adicionales y media queries según sea necesario */
+        @media (max-width: 768px) {
+            .pricing-container-custom {
+                flex-direction: column;
+            }
+
+            .pricing-box-custom {
+                width: auto;
+                /* Cajas de precios se expanden en pantallas más pequeñas */
+                margin-bottom: 20px;
+            }
+
+            .highlight-box {
+                position: static;
+                transform: none;
+            }
+        }
+
+
+        .bonus-container {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            height: 10%;
+        }
+
+        .bonus-text {
+            flex: 0 0 auto;
+            /* No crece, no se encoge y se basa en el ancho del contenido */
+            margin-right: 10px;
+            /* Ajusta según necesites espacio para la línea */
+            position: relative;
+            /* Para el posicionamiento absoluto del pseudo-elemento */
+            max-height: 10%;
+        }
+
+        .bonus-text::after {
+            content: '';
+            /* Pseudo-elemento para la línea */
+            display: block;
+            height: 2px;
+            /* Altura de la línea */
+            background-color: white;
+            /* Color de la línea */
+            flex-grow: 1;
+            /* Ocupa el espacio restante */
+            margin-left: 0px;
+            /* Espacio entre el texto y la línea */
+        }
+
+
+
+
+
+        .hero {
+            background: linear-gradient(to bottom, #333 0%, #1a1a1a 100%);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .strikethrough {
+            color: yellow;
+            text-decoration: line-through;
+        }
+
+        .subtitle {
+            margin-bottom: 40px;
+        }
+
+        .btn-yellow {
+            background-color: yellow;
+            color: black;
+            margin-right: 20px;
+            text-decoration: underline;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .video-container {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            margin-left: 30px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 20px;
+                display: block;
+                /* Cambia la disposición a bloque en lugar de flex */
+            }
+
+            .content {
+                margin-bottom: 20px;
+                /* Añade espacio entre el contenido y el vídeo */
+            }
+
+            .video-container {
+                /* Restablece el padding superior y establece la altura para ajustar el vídeo */
+                padding-top: 0;
+                height: auto;
+            }
+
+            .video-container iframe {
+                /* Coloca el vídeo debajo del contenido de texto */
+                position: relative;
+                width: 100%;
+                height: auto;
+                /* Asumiendo un aspecto de 16:9, calcula la altura basada en el ancho del vídeo */
+                padding-bottom: 56.25%;
+            }
+        }
+
+
+
+        .button-container {
+            text-align: center;
+            /* Center the buttons */
+            padding: 20px;
+            white-space: nowrap;
+            /* Prevent text from wrapping */
+        }
+
+        .button {
+            margin: 10px;
+            /* Space between the buttons */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            overflow: hidden;
+            /* Hide overflow */
+            text-overflow: ellipsis;
+            /* Show ellipsis for overflow */
+        }
+
+        .button-red {
+            background-color: red;
+            color: white;
+        }
+
+        .button-yellow {
+            background-color: yellow;
+            color: black;
+            /* Yellow button has black text */
+        }
+
+        /* Ensure the buttons don't exceed the container's width */
+        .button-red,
+        .button-yellow {
+            max-width: calc(50% - 20px);
+            /* Adjust this value based on the actual width of your buttons */
+            display: inline-block;
+            box-sizing: border-box;
+            /* Include padding in the width */
+        }
+
+        @media screen and (max-width: 600px) {
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                /* Stack buttons vertically */
+            }
+
+            .button {
+                width: calc(100% - 20px);
+                /* Full width minus margin */
+            }
+        }
+
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate {
+            display: inline-block;
+            text-align: center;
+            font-size: 500%;
+            animation: rotate 2s linear infinite;
+            /* Adjust the time as needed */
+        }
     </style>
 </head>
 
@@ -888,16 +1069,20 @@ li strong {
             </button>
         </div>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/WOT7p4LM0Fc?autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/WOT7p4LM0Fc?autoplay=1&mute=1&enablejsapi=1"
+                title="YouTube video player" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
     <section class="promesa">
         <div class="texto-promesa">
-            <h1>MI PROMESA <span style="background-color: yellow; padding: 5px; border-radius: 5px;">PARA TI:</span></h1>
+            <h1>MI PROMESA <span style="background-color: yellow; padding: 5px; border-radius: 5px;">PARA TI:</span>
+            </h1>
             <ul>
-                <li><b>No te venderé</b> un curso, ese te lo regalo en la suscripción de la plataforma en solo $79 USD por mes.</li>
-                <li><b>Te daré acceso</b> a seguimiento para que puedas pulir tus productos y servicios digitales y no te quedes atorado 1 año como me pasó a mí.</li>
+                <li><b>No te venderé</b> un curso, ese te lo regalo en la suscripción de la plataforma en solo $79 USD
+                    por mes.</li>
+                <li><b>Te daré acceso</b> a seguimiento para que puedas pulir tus productos y servicios digitales y no
+                    te quedes atorado 1 año como me pasó a mí.</li>
                 <li><b>Aprenderás cómo</b> crear una marca personal y una oferta de valor irresistible.</li>
                 <li><b>Podrás conectarte</b> con otros que pueden ayudarte y que sí... Tú también podrás ayudar.</li>
             </ul>
@@ -907,7 +1092,48 @@ li strong {
             <img src="images/chris-people-bg.png" alt="Modelo de Negocio de Poder">
         </div>
     </section>
-    
+
+    <section class="negocio-poder" style="color: white;">
+        <h1 style="text-align: center; font-size: xx-large; color: white;">¿Cómo se ve el <span
+                style="background-color: yellow; color: black; padding: 5px; border-radius: 5px;">equipo ideal</span>?
+        </h1>
+        <!-- <p>El primer programa de hablahispana que te llevará a construir intencionalmente un negocio en internet para
+            hacer dinero con principios comprobados.</p>
+        <p>¡Te quiero ayudar a construir una "máquina de hacer dinero"!</p> -->
+        <div class="contenido-central">
+            <div class="bloque-partner">
+                <h2 style="text-align: center; font-size: 500%">👨‍💻</h2>
+                <h2>Creador <span style="text-decoration: underline;">(ESTE ERES TÚ)</span></h2>
+                <ul>
+                    <li>👊 Planificas contenido</li>
+                    <li>👊 Creas contenido</li>
+                    <li>👊 Publicas contenido</li>
+                    <li>👊 Desarrollas tu producto digital</li>
+                </ul>
+
+            </div>
+            <div class="bloque-partner">
+                <h2 style="text-align: center; font-size: 500%" class="rotate">⚙️</h2>
+            </div>
+            <div class="bloque-partner">
+                <h2 style="text-align: center; font-size: 500%">👷</h2>
+                <h2>PARTNER <span style="text-decoration: underline;">(LO QUE NECESITAS)</span></h2>
+                <ul>
+                    <li>👊 Edita contenido</li>
+                    <li>👊 Crea la página web de tu producto</li>
+                    <li>👊 Contacta prospectos</li>
+                    <li>👊 Agenda citas para vender tu producto</li>
+                    <li>👊 Cierra las ventas de tu producto</li>
+                    <li>👊 Crea los embudos digitales</li>
+                    <li>👊 Crea estratégias de contenido</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </section>
+
 
     <!-- <section class="story">
         <div class="content-chris">
@@ -996,17 +1222,18 @@ li strong {
 
     </section> -->
     <br>
-        
-        <br>
-        <br>
-        <br>
-    <h1 style="color: white; text-align: center;">Lleva tu negocio digital a facturar de <span style="color: yellow; text-decoration: underline;">esta manera</span></h1>
+
+    <br>
+    <br>
+    <br>
+    <h1 style="color: white; text-align: center;">Con este equipo <br>tu puedes llevar tu negocio digital<br> a facturar
+        de <span style="color: yellow; text-decoration: underline;">esta manera</span></h1>
 
     <div class="comparativa-container">
         <br>
         <br>
-        
-        
+
+
         <div class="columna">
             <br>
             <!-- Asumiendo que las gráficas son imágenes -->
@@ -1066,12 +1293,12 @@ li strong {
 
 
     <section class="schedule" id="schedule-com">
-        
+
         <br>
         <br>
         <br>
         <div class="pricing-table">
-            
+
             <div class="pricing-option">
                 <h2 class="pricing-title" style="background:
                 linear-gradient(
@@ -1096,13 +1323,17 @@ li strong {
                     <li>✅ Llamadas semanales grupales</li>
                     <li>✅ 1 Embudo digital + upsells</li>
                     <li>✅ 50 canales de discusión</li>
+                    <li>✅ Embudos digitales</li>
                     <li>✅ 1 mes de Hubee Plus</li>
                 </ul>
-                <a href="https://hubee.app/index.php?route=product/product&product_id=158" class="order-btn">Quiero entrar</a>
+                <a href="https://hubee.app/index.php?route=product/product&product_id=158" class="order-btn">Quiero
+                    entrar</a>
             </div>
-            <div class="pricing-option" style="background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+            <div class="pricing-option"
+                style="background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
             radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);">
-                <h2 class="pricing-title">Master <p style="font-size: 60%; margin-bottom: 0;">(25% descuento)</p></h2>
+                <h2 class="pricing-title">Master <p style="font-size: 60%; margin-bottom: 0;">(25% descuento)</p>
+                </h2>
                 <div class="price">$222 <span style="font-size: 40%;">/ único pago</span></div>
                 <ul class="pricing-features">
                     <li>✅ Todo del Plan Básico</li>
@@ -1111,7 +1342,8 @@ li strong {
                     <li>✅ Descuento 50% en eventos</li>
                     <li>✅ 3 meses de Hubee Plus</li>
                 </ul>
-                <a href="https://hubee.app/index.php?route=product/product&product_id=159" class="order-btn">Quiero entrar</a>
+                <a href="https://hubee.app/index.php?route=product/product&product_id=159" class="order-btn">Quiero
+                    entrar</a>
             </div>
             <div class="pricing-option">
                 <h2 class="pricing-title" style="background: linear-gradient(
@@ -1127,7 +1359,8 @@ li strong {
                     #ffffff 80%,
                     #dedeff 84%,
                     #555564
-                  ); color: black;">Elite <p style="font-size: 60%; margin-bottom: 0;">(50% descuento)</p></h2>
+                  ); color: black;">Elite <p style="font-size: 60%; margin-bottom: 0;">(50% descuento)</p>
+                </h2>
                 <div class="price">$555 <span style="font-size: 40%;">/ único pago</span></div>
                 <ul class="pricing-features">
                     <li>✅ Todo del Plan Master</li>
@@ -1140,15 +1373,17 @@ li strong {
                     <li>🏆 Sesión 1 a 1</li>
                     <li>🏆 MRR Money Matrix</li>
                 </ul>
-                <a href="https://hubee.app/index.php?route=product/product&product_id=157" class="order-btn">Quiero entrar</a>
+                <a href="https://hubee.app/index.php?route=product/product&product_id=157" class="order-btn">Quiero
+                    entrar</a>
             </div>
         </div>
-        
+
     </section>
 
     <section class="negocio-poder" style="color: white;">
         <h1>BIENVENIDO A TU COMUNIDAD MILLONARIA</h1>
-        <p>El primer programa de hablahispana que te llevará a construir intencionalmente un negocio en internet para hacer dinero con principios comprobados.</p>
+        <p>El primer programa de hablahispana que te llevará a construir intencionalmente un negocio en internet para
+            hacer dinero con principios comprobados.</p>
         <p>¡Te quiero ayudar a construir una "máquina de hacer dinero"!</p>
         <div class="contenido-central">
             <div class="bloque">
@@ -1156,8 +1391,9 @@ li strong {
                 <h2>Construir</h2>
                 <p>Generando tus primeros 100,000 dólares... ¡vas a poder servir muchísimo mejor!</p>
                 <p>¡Aprende a convertir tu historia, tus talentos o tu hobby en un negocio rentable 🌐 en línea!</p>
-                <p><b>BONUS</b> Recibes las metodologías exactas de como Chris logró facturar con su producto digital!</p>
-            
+                <p><b>BONUS</b> Recibes las metodologías exactas de como Chris logró facturar con su producto digital!
+                </p>
+
             </div>
             <div class="bloque">
                 <h2 style="text-align: center; font-size: 500%">📈</h2>
@@ -1171,15 +1407,23 @@ li strong {
                 <h2>Generar</h2>
                 <p>Escalar tu negocio a 10,000 USD con tu oferta.</p>
                 <p>Crearemos contenido estratégico que hará crecer las ventas de tu producto digital</p>
-                <p><b>BONUS</b>Recibes las estratégias de contenido que usamos en @chrisbranders.croc para facturar $24,301 USD/mes</p>
+                <p><b>BONUS</b>Recibes las estratégias de contenido que usamos en @chrisbranders.croc para facturar
+                    $24,301 USD/mes</p>
             </div>
         </div>
-        <div class="call-to-action">
-            <p>¡Aprende a convertir tu historia, tus talentos o tu hobby en un negocio próspero 🌐 en línea!</p>
+        <br>
+        <br>
+        <br>
+        <div class="button-container">
+            <button class="button button-red" onclick="location.href = 'https://hubee.app/hubee-creators/';">Quiero
+                renunciar a los beneficios y perder las sesiones 1 a 1</button>
+            <button class="button button-yellow" onclick="location.href = '#schedule-com'">Sí, quiero todos los
+                beneficios exclusivos + coaching personalizado
+                online!!</button>
         </div>
     </section>
 
-    
+
 
     <footer>
         <p>Communitypartners | Chris Branders 2024 todos los derechos reservados</p>
