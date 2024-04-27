@@ -88,7 +88,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.826);
             /* Color blanco con opacidad */
             z-index: 0;
             /* Se sitúa detrás del contenido */
@@ -161,6 +161,26 @@
             text-transform: uppercase;
         }
 
+        @keyframes shakeZoom {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1) rotate(-4deg);
+            }
+
+            50% {
+                transform: scale(1) rotate(4deg);
+            }
+
+            75% {
+                transform: scale(1.1) rotate(-4deg);
+            }
+        }
+
         .btn-yellow {
             background-color: yellow;
             color: #121212;
@@ -170,6 +190,7 @@
             border-radius: 5px;
             font-size: 16px;
             text-transform: uppercase;
+            animation: shakeZoom 1s ease-in-out 0s infinite alternate;
         }
 
         .btn:hover {
@@ -500,57 +521,59 @@
         }
 
         .negocio-poder-partner {
-  position: relative; /* Esto es necesario para posicionar el div de fondo */
-  padding: 50px;
-  color: black;
-  /* Asegúrate de que tu imagen de fondo esté correctamente referenciada en la URL */
-  background: url('images/chris-andres.png') no-repeat center center;
-  background-size: cover;
-}
+            position: relative;
+            /* Esto es necesario para posicionar el div de fondo */
+            padding: 50px;
+            color: black;
+            /* Asegúrate de que tu imagen de fondo esté correctamente referenciada en la URL */
+            background: url('images/chris-andres.png') no-repeat center center;
+            background-size: cover;
+        }
 
-.negocio-poder-partner::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Aquí ajustas el color de fondo y la opacidad que deseas para la imagen de fondo */
-  background-size: cover;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
+        .negocio-poder-partner::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            /* Aquí ajustas el color de fondo y la opacidad que deseas para la imagen de fondo */
+            background-size: cover;
+            opacity: 0.1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
 
-.negocio-poder-partner  h1 {
-  color: yellow;
-  margin-bottom: 20px;
-}
+        .negocio-poder-partner h1 {
+            color: yellow;
+            margin-bottom: 20px;
+        }
 
-.negocio-poder-partner  p {
-  margin-bottom: 15px;
-}
+        .negocio-poder-partner p {
+            margin-bottom: 15px;
+        }
 
-.contenido-central-partner  {
-  color: black;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-}
+        .contenido-central-partner {
+            color: black;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
 
-.bloque-part {
-  width: 30%;
-}
+        .bloque-part {
+            width: 30%;
+        }
 
-.bloque-part img {
-  max-width: 100px;
-  margin-bottom: 20px;
-}
+        .bloque-part img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
 
-.bloque-part h2 {
-  color: #fddc01;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
+        .bloque-part h2 {
+            color: #fddc01;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
 
 
         .bloque-partner {
@@ -597,11 +620,37 @@
 
 
 
-        .oferta {
+        /* .oferta {
             text-align: center;
-            /* Centrar el título */
             padding: 20px;
-        }
+        } */
+
+        .oferta {
+  position: relative;
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+}
+
+.oferta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('images/asds.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.3; /* Ajusta este valor según la opacidad que desees */
+  z-index: -1;
+}
+
+/* .paquete-oferta {
+  position: relative;
+  z-index: 1;
+  background-color: transparent; 
+} */
+
 
         .paquete-oferta {
             display: flex;
@@ -609,12 +658,15 @@
             /* Alinear verticalmente */
             justify-content: space-around;
             /* Espacio alrededor del contenido */
-            background-color: #1e1e1e;
+            background-color: transparent;
+            position: relative;
+            z-index: 1;
             /* Color de fondo del contenedor */
         }
 
         .contenido-visual {
             flex-basis: 50%;
+            margin: 20px;
             /* Asumiendo que la imagen y la lista ocuparán la mitad del espacio cada una */
         }
 
@@ -932,6 +984,12 @@
             padding: 50px 20px;
         }
 
+        #money-section {
+            background: linear-gradient(to bottom, #414141 0%, #121212 100%);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
         .title {
             font-size: 2.5rem;
             color: white;
@@ -1076,6 +1134,184 @@
             animation: rotate 2s linear infinite;
             /* Adjust the time as needed */
         }
+
+
+
+
+
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .plan {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            /* Adjust as needed */
+            background-color: white;
+        }
+
+        .plan h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .price {
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+        }
+
+        .price-subtext {
+            text-align: center;
+            color: #666;
+        }
+
+        .features {
+            margin-top: 20px;
+        }
+
+        .features li {
+            list-style-type: none;
+            padding: 5px;
+            margin-left: -40px;
+            /* Removes the default list item padding */
+        }
+
+        .features li:before {
+            content: "✓";
+            /* You can replace this with an image or icon font */
+            margin-right: 5px;
+            color: green;
+            /* Or any other color */
+        }
+
+        .discount {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .select-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+            background-color: #00b300;
+            /* Adjust the color as needed */
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin: 0 15px;
+            width: 300px;
+        }
+
+        .card-header-1 {
+            background: linear-gradient(135deg, #009581 0%, #44fdea 100%);
+            color: white;
+            padding: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .card-header-2 {
+            background: linear-gradient(135deg, #00953e 0%, #44fd91 100%);
+            color: white;
+            padding: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .card-header-3 {
+            background: linear-gradient(135deg, #007295 0%, #44b3fd 100%);
+            color: white;
+            padding: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+
+        .price {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        .price-subtext {
+            color: #999;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .card-content {
+            padding: 20px;
+            color: #333;
+        }
+
+        .features {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .features li {
+            list-style: none;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .features li:before {
+            content: url('icon-path.svg');
+            /* Replace with your icon path */
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .select-button {
+            background: linear-gradient(135deg, #00953e 0%, #44fd91 100%);
+            color: white;
+            text-decoration: underline;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            border-radius:20px 20px;
+            font-size: 20px;
+            font-weight: 400;
+            transition: background-color 0.3s;
+        }
+
+        .select-button:hover {
+            background-color: #3700B3;
+        }
+
+        .discount {
+            background-color: #EEEEEE;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .underlined-span {
+            background: linear-gradient(to bottom, rgb(255, 255, 20) 0%, rgb(234, 234, 0) 100%);
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -1109,8 +1345,9 @@
             <h1 class="title">
                 <span class="strikethrough">NO COMPRES</span> MÁS CURSOS...
             </h1>
-            <h2 class="subtitle">
-                MEJOR CREA UNA COMUNIDAD MILLONARIA Y… ESCALA TUS VENTAS CON TU PROPIO ESPACIO DIGITAL
+            <h2 class="subtitle" style="font-weight: normal;">
+                MEJOR CREA UNA <span style="color: #33cccc; font-weight: bold;">COMUNIDAD MILLONARIA</span> Y… <span
+                    style="color: #ffff00; font-weight: bold;">ESCALA TUS VENTAS</span> CON TU PROPIO ESPACIO DIGITAL
             </h2>
             <button type="button" class="btn-yellow" onclick="location.href='#schedule-com'">
                 Si quiero unirme al círculo de creadores
@@ -1124,15 +1361,16 @@
 
     <section class="promesa">
         <div class="texto-promesa">
-            <h1>MI PROMESA <span style="background-color: yellow; padding: 5px; border-radius: 5px;">PARA TI:</span>
+            <h1>MI PROMESA <span class="underlined-span">PARA TI:</span>
             </h1>
             <ul>
-                <li><b>No te venderé</b> un curso, ese te lo regalo en la suscripción de la plataforma en solo $79 USD
+                <li><b>🏅 No te venderé</b> un curso...
                     por mes.</li>
-                <li><b>Te daré acceso</b> a seguimiento para que puedas pulir tus productos y servicios digitales y no
+                <li><b>🏅 Te daré acceso</b> a seguimiento para que puedas pulir tus productos y servicios digitales y
+                    no
                     te quedes atorado 1 año como me pasó a mí.</li>
-                <li><b>Aprenderás cómo</b> crear una marca personal y una oferta de valor irresistible.</li>
-                <li><b>Podrás conectarte</b> con otros que pueden ayudarte y que sí... Tú también podrás ayudar.</li>
+                <li><b>🏅Aprenderás cómo</b> crear una marca personal y una oferta de valor irresistible.</li>
+                <li><b>🏅Podrás conectarte</b> con otros que pueden ayudarte y que sí... Tú también podrás ayudar.</li>
             </ul>
         </div>
         <div class="imagen-promesa">
@@ -1143,7 +1381,7 @@
 
     <section class="negocio-poder-partner" style="color: white;">
         <h1 style="text-align: center; font-size: xx-large; color: black;">¿Cómo se ve el <span
-                style="background-color: yellow; color: black; padding: 5px; border-radius: 5px;">equipo ideal</span>?
+                class="underlined-span">equipo ideal</span>?
         </h1>
         <!-- <p>El primer programa de hablahispana que te llevará a construir intencionalmente un negocio en internet para
             hacer dinero con principios comprobados.</p>
@@ -1152,7 +1390,7 @@
             <div class="bloque-partner">
                 <h2 style="text-align: center; font-size: 500%">👨‍💻</h2>
                 <h2 style="color: black;">Creador <span style="text-decoration: underline;">(ESTE ERES TÚ)</span></h2>
-                <ul style="color: black; font-weight: bold; font-size: 1.2em;"">
+                <ul style="color: black; font-size: 1.2em;"">
                     <br>
                     <li>👊 Planificas contenido</li>
                     <li>👊 Creas contenido</li>
@@ -1161,13 +1399,14 @@
                 </ul>
 
             </div>
-            <div class="bloque-partner">
-                <h2 style="text-align: center; font-size: 500%" class="rotate">⚙️</h2>
+            <div class=" bloque-partner">
+                    <h2 style="text-align: center; font-size: 500%" class="rotate">⚙️</h2>
             </div>
             <div class="bloque-partner">
                 <h2 style="text-align: center; font-size: 500%;">👷</h2>
-                <h2 style="color: black;">PARTNER <span style="text-decoration: underline;">(LO QUE NECESITAS)</span></h2>
-                <ul style="color: black; font-weight: bold; font-size: 1.2em;">
+                <h2 style="color: black;">PARTNER <span style="text-decoration: underline;">(LO QUE NECESITAS)</span>
+                </h2>
+                <ul style="color: black; font-size: 1.2em;">
                     <br>
                     <li>👊 Edita contenido</li>
                     <li>👊 Crea la página web de tu producto</li>
@@ -1271,59 +1510,66 @@
         <br><br><br><br><br>
 
     </section> -->
-    <br>
 
-    <br>
-    <br>
-    <br>
-    <h1 style="color: white; text-align: center;">Con este equipo <br>tu puedes llevar tu negocio digital<br> a facturar
-        de <span style="color: yellow; text-decoration: underline;">esta manera</span></h1>
 
-    <div class="comparativa-container">
+    <section id="money-section">
         <br>
         <br>
 
 
-        <div class="columna">
+        <h1 style="color: white; text-align: center; font-size: xx-large;">Con <span class="underlined-span"> este
+                equipo</span> <br>tu puedes llevar tu
+            negocio digital<br> a facturar
+            de <span class="underlined-span" style="text-decoration: udnerlined;">esta manera</span></h1>
+
+        <div class="comparativa-container">
             <br>
-            <!-- Asumiendo que las gráficas son imágenes -->
-            <img src="images/money-fac-1.png" alt="Antes" style="max-height: 20%;">
-            <div class="datos">
-                <p>Total de Ingresos</p>
-                <p>USD$ 803,934.03</p>
-            </div>
-        </div>
-        <div class="columna">
             <br>
-            <!-- Asumiendo que las gráficas son imágenes -->
-            <img src="images/money-fac-2.png" alt="Después" style="max-height: 20%;">
-            <div class="datos">
-                <p>Total de Ingresos</p>
-                <p>USD$ 1,029,351.64</p>
+
+
+            <div class="columna">
+                <br>
+                <!-- Asumiendo que las gráficas son imágenes -->
+                <img src="images/money-fac-1.png" alt="Antes" style="max-height: 20%;">
+                <div class="datos">
+                    <p>Total de Ingresos</p>
+                    <p>USD$ 803,934.03</p>
+                </div>
             </div>
+            <div class="columna">
+                <br>
+                <!-- Asumiendo que las gráficas son imágenes -->
+                <img src="images/money-fac-2.png" alt="Después" style="max-height: 20%;">
+                <div class="datos">
+                    <p>Total de Ingresos</p>
+                    <p>USD$ 1,029,351.64</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
+    </section>
     <section class="oferta">
         <br>
         <br>
         <br>
         <br>
-        <h1 style="color: white;">EN QUÉ NOS ENFOCAREMOS...</h1>
-        <div class="paquete-oferta">
+        <h1 style="color: white;">EN <span class="underlined-span">QUÉ</span> NOS ENFOCAREMOS...</h1>
+        <br>
+        <br>
+        <div class="paquete-oferta" style="background-color: transparent;">
             <div class="contenido-visual">
                 <!-- Asumiendo que las imágenes de los productos están en una carpeta llamada "img" -->
-                <img src="images/com-millinarios.png" alt="Productos">
+                <img src="images/oferta-1.png" alt="Productos">
             </div>
             <div class="descripcion">
-                <h2 style="color: yellow; text-decoration: underline;">EL PROCESO PARA CREAR TU NEGOCIO DIGITAL</h2>
+                <h2 style="color: yellow; text-decoration: underline;">Etapa 1</h2>
                 <ul>
                     <li>🔴 Identificar tu Avatar: Entender quién es tu cliente ideal</li>
                     <li>🔴 Probar el mercado: Validar la demanda de tu oferta</li>
@@ -1334,8 +1580,42 @@
                     <li>🔴 Diseñar tu embudo digital: Establecer un proceso de ventas efectivo</li>
                     <li>🔴 Diseñar la estrategia de contenidos: Planificar tu comunicación online</li>
                     <li>🔴 Diseñar regalo gratuito: Incentivar la suscripción a tu lista</li>
-                    <li>🔴 Diseñar los Correos electrónicos: Crear una secuencia que convierta</li>
-                    <li>🔴 Crear tu primer producto digital para cobrar $$$: Monetizar tu conocimiento</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="paquete-oferta">
+            <div class="descripcion">
+                <h2 style="color: yellow; text-decoration: underline;">Etapa 2</h2>
+                <ul>
+                    <li>🔴 Iniciar con mensajes de prospección en frío</li>
+                    <li>🔴 Capacitación e Instalación del Partner en tu equipo</li>
+                    <li>🔴 Activación de Upsell de tu producto digital</li>
+                    <li>🔴 Realizar las primeras llamadas de cierre</li>
+                    <li>🔴 Recolectar información para mejorar oferta</li>
+                </ul>
+            </div>
+            <div class="contenido-visual">
+                <!-- Asumiendo que las imágenes de los productos están en una carpeta llamada "img" -->
+                <img src="images/com-millinarios.png" alt="Productos">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="paquete-oferta">
+            <div class="contenido-visual">
+                <!-- Asumiendo que las imágenes de los productos están en una carpeta llamada "img" -->
+                <img src="images/com-millinarios.png" alt="Productos">
+            </div>
+            <div class="descripcion">
+                <h2 style="color: yellow; text-decoration: underline;">Etapa 3</h2>
+                <ul>
+                    <li>🔴 Facturar $10,000 USD con tu producto</li>
+                    <li>🔴 Escalar la cantidad de mensajes</li>
+                    <li>🔴 Desarrollo de sistema de prospección en frío</li>
+                    <li>🔴 Refinación de contenido estratégico en redes</li>
+                    <li>🔴 Campañas de Email Marketing desarrolladas</li>
                 </ul>
             </div>
         </div>
@@ -1343,14 +1623,16 @@
 
 
     <section class="schedule" id="schedule-com">
+        <h1 style="color: black;">Lleva tu <span class="underlined-span">Marca Personal</span> <br>al siguiente <span class="underlined-span">nivel</span></h1>
 
         <br>
         <br>
         <br>
         <div class="pricing-table">
+            <div class="pricing-table">
 
-            <div class="pricing-option">
-                <h2 class="pricing-title" style="background:
+                <!-- <div class="pricing-option">
+                    <h2 class="pricing-title" style="background:
                 linear-gradient(
                     -72deg,
                     #dedede,
@@ -1364,39 +1646,38 @@
                     #dedede 84%,
                     #a1a1a1
                 ); color: black;">Básico</h2>
-                <div class="price">$111 <span style="font-size: 40%;">/ pago mensual</span></div>
-                <ul class="pricing-features">
-                    <li>✅ 100 Ofertas Digitales</li>
-                    <li>✅ 100 Cursos + lecciones ilimitadas</li>
-                    <li>✅ Créditos Hower (1,000)</li>
-                    <li>✅ Miembros ilimitados en comunidad</li>
-                    <li>✅ Llamadas semanales grupales</li>
-                    <li>✅ 1 Embudo digital + upsells</li>
-                    <li>✅ 50 canales de discusión</li>
-                    <li>✅ Embudos digitales</li>
-                    <li>✅ 1 mes de Hubee Plus</li>
-                </ul>
-                <a href="https://hubee.app/index.php?route=product/product&product_id=158" class="order-btn">Quiero
-                    entrar</a>
-            </div>
-            <div class="pricing-option"
-                style="background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                    <div class="price">$111 <span style="font-size: 40%;">/ pago mensual</span></div>
+                    <ul class="pricing-features">
+                        <li>✅ 100 Ofertas Digitales</li>
+                        <li>✅ 100 Cursos + lecciones ilimitadas</li>
+                        <li>✅ Créditos Hower (1,000)</li>
+                        <li>✅ Miembros ilimitados en comunidad</li>
+                        <li>✅ Llamadas semanales grupales</li>
+                        <li>✅ 50 canales de discusión</li>
+                        <li>✅ Embudos digitales + upsells</li>
+                        <li>✅ 1 mes de Hubee Plus</li>
+                    </ul>
+                    <a href="https://hubee.app/index.php?route=product/product&product_id=158" class="order-btn">Quiero
+                        entrar</a>
+                </div>
+                <div class="pricing-option"
+                    style="background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
             radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);">
-                <h2 class="pricing-title">Master <p style="font-size: 60%; margin-bottom: 0;">(25% descuento)</p>
-                </h2>
-                <div class="price">$222 <span style="font-size: 40%;">/ único pago</span></div>
-                <ul class="pricing-features">
-                    <li>✅ Todo del Plan Básico</li>
-                    <li>✅ Créditos Hower (2,500)</li>
-                    <li>✅ Soporte exclusivo</li>
-                    <li>✅ Descuento 50% en eventos</li>
-                    <li>✅ 3 meses de Hubee Plus</li>
-                </ul>
-                <a href="https://hubee.app/index.php?route=product/product&product_id=159" class="order-btn">Quiero
-                    entrar</a>
-            </div>
-            <div class="pricing-option">
-                <h2 class="pricing-title" style="background: linear-gradient(
+                    <h2 class="pricing-title">Master <p style="font-size: 60%; margin-bottom: 0;">(25% descuento)</p>
+                    </h2>
+                    <div class="price">$222 <span style="font-size: 40%;">/ único pago</span></div>
+                    <ul class="pricing-features">
+                        <li>✅ Todo del Plan Básico</li>
+                        <li>✅ Créditos Hower (2,500)</li>
+                        <li>✅ Soporte exclusivo</li>
+                        <li>✅ Descuento 50% en eventos</li>
+                        <li>✅ 3 meses de Hubee Plus</li>
+                    </ul>
+                    <a href="https://hubee.app/index.php?route=product/product&product_id=159" class="order-btn">Quiero
+                        entrar</a>
+                </div>
+                <div class="pricing-option">
+                    <h2 class="pricing-title" style="background: linear-gradient(
                     -72deg,
                     #dedeff,
                     #ffffff 16%,
@@ -1410,23 +1691,95 @@
                     #dedeff 84%,
                     #555564
                   ); color: black;">Elite <p style="font-size: 60%; margin-bottom: 0;">(50% descuento)</p>
-                </h2>
-                <div class="price">$555 <span style="font-size: 40%;">/ único pago</span></div>
-                <ul class="pricing-features">
-                    <li>✅ Todo del Plan Master</li>
-                    <li>✅ 12 meses de Hubee Plus</li>
-                    <li>✅ 50% Desc. Eventos en vivo.</li>
-                    <li>✅ Créditos Hower (7,000)</li>
-                    <div class="bonus-container">
-                        <p class="bonus-text">BONUS</p>
+                    </h2>
+                    <div class="price">$555 <span style="font-size: 40%;">/ único pago</span></div>
+                    <ul class="pricing-features">
+                        <li>✅ Todo del Plan Master</li>
+                        <li>✅ 12 meses de Hubee Plus</li>
+                        <li>✅ 50% Desc. Eventos en vivo.</li>
+                        <li>✅ Créditos Hower (7,000)</li>
+                        <div class="bonus-container">
+                            <p class="bonus-text">BONUS</p>
+                        </div>
+                        <li>🏆 Sesión 1 a 1</li>
+                        <li>🏆 MRR Money Matrix</li>
+                    </ul>
+                    <a href="https://hubee.app/index.php?route=product/product&product_id=157" class="order-btn">Quiero
+                        entrar</a>
+                </div> -->
+
+                <div class="card">
+                    <div class="card-header-1">
                     </div>
-                    <li>🏆 Sesión 1 a 1</li>
-                    <li>🏆 MRR Money Matrix</li>
-                </ul>
-                <a href="https://hubee.app/index.php?route=product/product&product_id=157" class="order-btn">Quiero
-                    entrar</a>
+                    <h2 style="font-weight:lighter; font-size: xx-large;">Básico</h2>
+                    <div class="price">$111 <span style="font-size: 40%;">/ pago mensual</span></div>
+                    <div class="price-subtext">3.7 USD por dia!</div>
+                    <div class="card-content">
+                        <ul class="pricing-features">
+                            <li>✅ 100 Ofertas Digitales</li>
+                            <li>✅ 100 Cursos + lecciones ilimitadas</li>
+                            <li>✅ Créditos Hower (1,000)</li>
+                            <li>✅ Miembros ilimitados en comunidad</li>
+                            <li>✅ Llamadas semanales grupales</li>
+                            <li>✅ 50 canales de discusión</li>
+                            <li>✅ Embudos digitales + upsells</li>
+                            <li>✅ 1 mes de Hubee Plus</li>
+                        </ul>
+                        
+                        <a href="https://hubee.app/index.php?route=product/product&product_id=158" class="select-button">Quiero entrar</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header-2">
+                    </div>
+                    
+                    <h2 style="font-weight:lighter; font-size: xx-large;">Master</h2>
+                    <div class="price">$222 <span style="font-size: 40%;">/ único pago</span></div>
+                    <div class="price-subtext">0.608 USD por dia!</div>
+                    <div class="card-content">
+                        <div class="discount">
+                            ¡25% DESCUENTO!
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✅ Todo del Plan Básico</li>
+                            <li>✅ Créditos Hower (2,500)</li>
+                            <li>✅ Soporte exclusivo</li>
+                            <li>✅ Descuento 50% en eventos</li>
+                            <li>✅ 3 meses de Hubee Plus</li>
+                        </ul>
+                        <a href="https://hubee.app/index.php?route=product/product&product_id=159" class="select-button">Quiero entrar</a>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header-3">
+                    </div>
+                    <h2 style="font-weight:lighter; font-size: xx-large;">Elite</h2>
+                    <div class="price">$555 <span style="font-size: 40%;">/ único pago</span></div>
+                    <div class="price-subtext">1.52 USD por dia!</div>
+                    <div class="card-content">
+                        <ul class="pricing-features">
+                            <li>✅ Todo del Plan Master</li>
+                            <li>✅ 12 meses de Hubee Plus</li>
+                            <li>✅ 50% Desc. Eventos en vivo.</li>
+                            <li>✅ Créditos Hower (7,000)</li>
+                            <div class="bonus-container">
+                                <p class="bonus-text">BONUS</p>
+                            </div>
+                        </ul>
+                        <div class="discount">
+                            <h4>BONUS</h4>
+                            <ul class="pricing-features">
+                                <li>🏆 Sesión 1 a 1</li>
+                                <li>🏆 MRR Money Matrix</li>
+                            </ul>
+                        </div>
+                        <a href="https://hubee.app/index.php?route=product/product&product_id=157" class="select-button">Quiero entrar</a>
+                    </div>
+                </div>
             </div>
-        </div>
 
     </section>
 

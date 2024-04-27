@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Despertar de la Oveja Negra</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif; /* You can substitute this with the actual font you're using */
+    background-color: #000; /* Adjust the background color as needed */
+  }
+
+  .container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px; /* Adjust as needed */
+  }
+
+  .content {
+    max-width: 50%; /* Adjust width as needed for your design */
+    color: #fff; /* Set text color */
+  }
+
+  .content h1 {
+    font-size: 2.5rem; /* Adjust font-size as needed */
+    color: #fff; /* Adjust heading color as needed */
+    margin-bottom: 0.5em;
+  }
+
+  .content p {
+    font-size: 1.2rem; /* Adjust font-size as needed */
+    margin-bottom: 1.5em;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 90%; /* Adjust width as needed */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Adjust border color as needed */
+  }
+
+  button {
+    width: 90%; /* Adjust width as needed */
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF0000; /* Adjust background color as needed */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .image-area {
+    max-width: 50%; /* Adjust width as needed for your design */
+    /* Add styles for your image or image container */
+  }
+
+  .image-area img {
+    width: 100%;
+    height: auto;
+    /* Add more styles if needed */
+  }
+  
+  /* Adjust the layout for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .content, .image-area {
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="content">
+    <!-- Replace with your actual logo and paths -->
+    <img src="logo-path.svg" alt="El Despertar de la Oveja Negra" style="max-width: 300px; margin-bottom: 20px;">
+    
+    <h1>Descubre cómo conectar con tu propósito y manifestar abundancia en las 6 áreas de tu vida</h1>
+    <p>Sal del sistema y de tu vida mediocre para no ser uno más del montón.</p>
+
+    <input type="text" name="nombre" placeholder="Nombre">
+    <input type="email" name="email" placeholder="Correo electrónico">
+    <button type="submit">Quiero Registrarme</button>
+  </div>
+
+  <div class="image-area">
+    <!-- Replace 'right-side-image.jpg' with your actual image path -->
+    <img src="right-side-image.jpg" alt="Imagen Ilustrativa">
+  </div>
+</div>
+
+</body>
+</html>

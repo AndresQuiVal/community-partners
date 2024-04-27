@@ -37,7 +37,7 @@
         }
 
         /* Estilos de la sección principal */
-        .hero {
+        /* .hero {
             background: linear-gradient(to bottom, #333 0%, #1a1a1a 100%);
             text-align: center;
             padding: 50px 20px;
@@ -45,7 +45,37 @@
 
         .hero h1 {
             font-size: 2.5rem;
-            /* Ajusta el tamaño de la fuente como prefieras */
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            margin-bottom: 40px; 
+        }*/
+
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/chris-dubai.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.2;
+            /* Ajusta este valor para la opacidad deseada */
+            z-index: -1;
+        }
+
+        /* Asegúrate de ajustar el resto del CSS de .hero como prefieras */
+        .hero h1 {
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
 
@@ -54,7 +84,7 @@
         }
 
         /*section of calendly*/
-        .schedule {
+        /* .schedule {
             background: white;
             text-align: center;
             color: black;
@@ -68,6 +98,37 @@
 
         .schedule p {
             margin-bottom: 40px;
+        } */
+
+        .schedule {
+            position: relative;
+            text-align: center;
+            padding: 50px 20px;
+            color: black;
+        }
+
+        .schedule::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/chris-dubai.png') no-repeat center center;
+            background-size: cover;
+            /* Ajusta este valor según la opacidad que desees */
+            z-index: -1;
+        }
+
+        .schedule h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            /* Asegúrate de que el color del texto contrasta con tu imagen de fondo */
+        }
+
+        .schedule p {
+            margin-bottom: 40px;
+            /* Más estilos para tus párrafos aquí */
         }
 
         /* Contenedor de video */
@@ -155,10 +216,8 @@
 
 <body>
     <header>
-        <img style="width: 25%;" fetchpriority="high" decoding="async"
-            src="./com-logo.png"
-            class="attachment-full size-full wp-image-50" alt=""
-            sizes="(max-width: 1080px) 10vw, 1080px">
+        <img style="width: 25%;" fetchpriority="high" decoding="async" src="./com-logo.png"
+            class="attachment-full size-full wp-image-50" alt="" sizes="(max-width: 1080px) 10vw, 1080px">
     </header>
 
     <section class="hero">
@@ -170,7 +229,12 @@
             VÍDEO PARA CONTINUAR</p>
         <!-- Contenedor para el video -->
         <div class="video-container">
-            <iframe src="https://player.vimeo.com/video/938915637?h=2a9aa0dbc6&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <!-- <iframe src="https://player.vimeo.com/video/938915637?h=2a9aa0dbc6&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/Dl2k8qJUmxA?si=-Bu94Ag072DhI-td?autoplay=1&mute=1&enablejsapi=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <!--Seccion de botones de accion-->
@@ -182,9 +246,11 @@
             </p>
 
             <div class="buttons">
-                <button type="button" class="btn-yellow" style="margin-right: 20px;" onclick="location.href = 'com_index.html'">Si Quiero Crear mi Comunidad
+                <button type="button" class="btn-yellow" style="margin-right: 20px;"
+                    onclick="location.href = 'com_index.html'">Si Quiero Crear mi Comunidad
                     Millonaria</button>
-                <button type="button" class="btn" onclick="location.href='#schedule-sect'">Quiero un Partner Para mi Negocio Digital</button>
+                <button type="button" class="btn" onclick="location.href='#schedule-sect'">Quiero un Partner Para mi
+                    Negocio Digital</button>
             </div>
             <br>
 
@@ -215,7 +281,9 @@
             <br>
             <br>
             <br>
-            <p class="notice">NOT FACEBOOK: This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+            <p class="notice">NOT FACEBOOK: This site is not a part of the Facebook website or Facebook Inc.
+                Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK,
+                Inc.</p>
             <br>
             <br>
             <p class="notice">Communitypartners | Chris Branders 2024 todos los derechos reservados
