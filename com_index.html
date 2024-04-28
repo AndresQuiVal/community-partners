@@ -125,6 +125,18 @@
             height: 100%;
         }
 
+
+        @media (max-width: 767px) {
+            .video-container {
+                padding-bottom: 0; /* Proporción de aspecto 16:9 para video responsive */
+            }
+
+            .video-container iframe {
+                width: 100%;
+                height: 400px;
+            }
+        }
+
         .highlight-yellow {
             color: #ffd700;
         }
@@ -306,15 +318,18 @@
             background-color: #0056b3;
         }
 
-        @media (max-width: 960px) {
+        media (max-width: 960px) {
             .pricing-table {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .pricing-option {
-                width: 80%;
+            .card {
+                /* Asumiendo que .card es tu clase de precio individual */
+                width: 100%;
+                /* O el porcentaje que desees, pero 100% ocupará todo el ancho disponible */
                 margin-bottom: 20px;
+                /* No necesitas 'order-btn' aquí a menos que también tengas esa clase aplicada a tus tarjetas */
             }
         }
 
@@ -606,7 +621,7 @@
         }
 
         /* Responsiveness */
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
             .contenido-central {
                 flex-direction: column;
             }
@@ -614,6 +629,19 @@
             .bloque {
                 width: 80%;
                 margin-bottom: 30px;
+            }
+        } */
+
+        @media (max-width: 960px) {
+            .contenido-central {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bloque { /* Asumiendo que .card es tu clase de precio individual */
+                width: 100%; /* O el porcentaje que desees, pero 100% ocupará todo el ancho disponible */
+                margin-bottom: 20px;
+                /* No necesitas 'order-btn' aquí a menos que también tengas esa clase aplicada a tus tarjetas */
             }
         }
 
@@ -626,26 +654,27 @@
         } */
 
         .oferta {
-  position: relative;
-  text-align: center;
-  padding: 50px 20px;
-  color: white;
-}
+            position: relative;
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+        }
 
-.oferta::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('images/asds.png') no-repeat center center;
-  background-size: cover;
-  opacity: 0.3; /* Ajusta este valor según la opacidad que desees */
-  z-index: -1;
-}
+        .oferta::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/asds.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+            /* Ajusta este valor según la opacidad que desees */
+            z-index: -1;
+        }
 
-/* .paquete-oferta {
+        /* .paquete-oferta {
   position: relative;
   z-index: 1;
   background-color: transparent; 
@@ -1061,6 +1090,7 @@
 
         .button-container {
             text-align: center;
+            align-items: center;
             /* Center the buttons */
             padding: 20px;
             white-space: nowrap;
@@ -1287,7 +1317,7 @@
             width: 100%;
             text-align: center;
             padding: 15px;
-            border-radius:20px 20px;
+            border-radius: 20px 20px;
             font-size: 20px;
             font-weight: 400;
             transition: background-color 0.3s;
@@ -1355,7 +1385,7 @@
         </div>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/WOT7p4LM0Fc?autoplay=1&mute=1&enablejsapi=1"
-                title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                title="YouTube video player" style="max-height: 100%;" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -1598,7 +1628,7 @@
             </div>
             <div class="contenido-visual">
                 <!-- Asumiendo que las imágenes de los productos están en una carpeta llamada "img" -->
-                <img src="images/com-millinarios.png" alt="Productos">
+                <img src="images/chris-formalon.png" alt="Productos">
             </div>
         </div>
         <br>
@@ -1606,7 +1636,7 @@
         <div class="paquete-oferta">
             <div class="contenido-visual">
                 <!-- Asumiendo que las imágenes de los productos están en una carpeta llamada "img" -->
-                <img src="images/com-millinarios.png" alt="Productos">
+                <img src="images/brander-3.png" alt="Productos">
             </div>
             <div class="descripcion">
                 <h2 style="color: yellow; text-decoration: underline;">Etapa 3</h2>
@@ -1623,91 +1653,14 @@
 
 
     <section class="schedule" id="schedule-com">
-        <h1 style="color: black;">Lleva tu <span class="underlined-span">Marca Personal</span> <br>al siguiente <span class="underlined-span">nivel</span></h1>
+        <h1 style="color: black;">Lleva tu <span class="underlined-span">Marca Personal</span> <br>al siguiente <span
+                class="underlined-span">nivel</span></h1>
 
         <br>
         <br>
         <br>
         <div class="pricing-table">
             <div class="pricing-table">
-
-                <!-- <div class="pricing-option">
-                    <h2 class="pricing-title" style="background:
-                linear-gradient(
-                    -72deg,
-                    #dedede,
-                    #ffffff 16%,
-                    #dedede 21%,
-                    #ffffff 24%,
-                    #dedede 36%,
-                    #ffffff 45%,
-                    #dedede 72%,
-                    #ffffff 80%,
-                    #dedede 84%,
-                    #a1a1a1
-                ); color: black;">Básico</h2>
-                    <div class="price">$111 <span style="font-size: 40%;">/ pago mensual</span></div>
-                    <ul class="pricing-features">
-                        <li>✅ 100 Ofertas Digitales</li>
-                        <li>✅ 100 Cursos + lecciones ilimitadas</li>
-                        <li>✅ Créditos Hower (1,000)</li>
-                        <li>✅ Miembros ilimitados en comunidad</li>
-                        <li>✅ Llamadas semanales grupales</li>
-                        <li>✅ 50 canales de discusión</li>
-                        <li>✅ Embudos digitales + upsells</li>
-                        <li>✅ 1 mes de Hubee Plus</li>
-                    </ul>
-                    <a href="https://hubee.app/index.php?route=product/product&product_id=158" class="order-btn">Quiero
-                        entrar</a>
-                </div>
-                <div class="pricing-option"
-                    style="background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-            radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);">
-                    <h2 class="pricing-title">Master <p style="font-size: 60%; margin-bottom: 0;">(25% descuento)</p>
-                    </h2>
-                    <div class="price">$222 <span style="font-size: 40%;">/ único pago</span></div>
-                    <ul class="pricing-features">
-                        <li>✅ Todo del Plan Básico</li>
-                        <li>✅ Créditos Hower (2,500)</li>
-                        <li>✅ Soporte exclusivo</li>
-                        <li>✅ Descuento 50% en eventos</li>
-                        <li>✅ 3 meses de Hubee Plus</li>
-                    </ul>
-                    <a href="https://hubee.app/index.php?route=product/product&product_id=159" class="order-btn">Quiero
-                        entrar</a>
-                </div>
-                <div class="pricing-option">
-                    <h2 class="pricing-title" style="background: linear-gradient(
-                    -72deg,
-                    #dedeff,
-                    #ffffff 16%,
-                    #dedeff 21%,
-                    #ffffff 24%,
-                    #dedeff 36%,
-                    #ffffff 45%,
-                    #ffffff 60%,
-                    #dedeff 72%,
-                    #ffffff 80%,
-                    #dedeff 84%,
-                    #555564
-                  ); color: black;">Elite <p style="font-size: 60%; margin-bottom: 0;">(50% descuento)</p>
-                    </h2>
-                    <div class="price">$555 <span style="font-size: 40%;">/ único pago</span></div>
-                    <ul class="pricing-features">
-                        <li>✅ Todo del Plan Master</li>
-                        <li>✅ 12 meses de Hubee Plus</li>
-                        <li>✅ 50% Desc. Eventos en vivo.</li>
-                        <li>✅ Créditos Hower (7,000)</li>
-                        <div class="bonus-container">
-                            <p class="bonus-text">BONUS</p>
-                        </div>
-                        <li>🏆 Sesión 1 a 1</li>
-                        <li>🏆 MRR Money Matrix</li>
-                    </ul>
-                    <a href="https://hubee.app/index.php?route=product/product&product_id=157" class="order-btn">Quiero
-                        entrar</a>
-                </div> -->
-
                 <div class="card">
                     <div class="card-header-1">
                     </div>
@@ -1725,15 +1678,16 @@
                             <li>✅ Embudos digitales + upsells</li>
                             <li>✅ 1 mes de Hubee Plus</li>
                         </ul>
-                        
-                        <a href="https://hubee.app/index.php?route=product/product&product_id=158" class="select-button">Quiero entrar</a>
+
+                        <a href="https://hubee.app/index.php?route=product/product&product_id=158"
+                            class="select-button">Quiero entrar</a>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-header-2">
                     </div>
-                    
+
                     <h2 style="font-weight:lighter; font-size: xx-large;">Master</h2>
                     <div class="price">$222 <span style="font-size: 40%;">/ único pago</span></div>
                     <div class="price-subtext">0.608 USD por dia!</div>
@@ -1748,11 +1702,10 @@
                             <li>✅ Descuento 50% en eventos</li>
                             <li>✅ 3 meses de Hubee Plus</li>
                         </ul>
-                        <a href="https://hubee.app/index.php?route=product/product&product_id=159" class="select-button">Quiero entrar</a>
+                        <a href="https://hubee.app/index.php?route=product/product&product_id=159"
+                            class="select-button">Quiero entrar</a>
                     </div>
                 </div>
-
-
                 <div class="card">
                     <div class="card-header-3">
                     </div>
@@ -1776,7 +1729,8 @@
                                 <li>🏆 MRR Money Matrix</li>
                             </ul>
                         </div>
-                        <a href="https://hubee.app/index.php?route=product/product&product_id=157" class="select-button">Quiero entrar</a>
+                        <a href="https://hubee.app/index.php?route=product/product&product_id=157"
+                            class="select-button">Quiero entrar</a>
                     </div>
                 </div>
             </div>

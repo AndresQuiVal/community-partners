@@ -121,7 +121,7 @@
         }
 
         .schedule h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
             /* Asegúrate de que el color del texto contrasta con tu imagen de fondo */
         }
@@ -210,6 +210,47 @@
             font-size: 0.9em;
         }
 
+        @keyframes shakeZoom {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1) rotate(-4deg);
+            }
+
+            50% {
+                transform: scale(1) rotate(4deg);
+            }
+
+            75% {
+                transform: scale(1.1) rotate(-4deg);
+            }
+        }
+
+        .btn-purple {
+            background-color: #e600e6;
+            /* Color de fondo de los botones */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            text-transform: uppercase;
+            animation: shakeZoom 1s ease-in-out 0s infinite alternate;
+        }
+
+        .btn:hover {
+            background-color: #ff1aff;
+        }
+
+        .notice {
+            font-size: 0.9em;
+        }
+
         /* Estilos adicionales aquí... */
     </style>
 </head>
@@ -249,7 +290,7 @@
                 <button type="button" class="btn-yellow" style="margin-right: 20px;"
                     onclick="location.href = 'com_index.html'">Si Quiero Crear mi Comunidad
                     Millonaria</button>
-                <button type="button" class="btn" onclick="location.href='#schedule-sect'">Quiero un Partner Para mi
+                <button type="button" class="btn-purple" onclick="location.href='#schedule-sect'">Quiero un Partner Para mi
                     Negocio Digital</button>
             </div>
             <br>
