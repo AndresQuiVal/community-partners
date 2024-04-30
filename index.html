@@ -55,7 +55,7 @@
         .hero {
             position: relative;
             text-align: center;
-            padding: 120px 80px;
+            padding: 100px 40px;
             color: white;
         }
 
@@ -387,6 +387,13 @@
             /* Darker green on hover */
         }
 
+        .video-container img {
+            width: 90%; /* Establece un ancho relativo al contenedor para no sobrepasar los límites */
+            height: auto; /* Mantiene la proporción de la imagen */
+            object-fit: contain; /* Asegura que toda la imagen se muestre completamente */
+            margin: 10px auto; /* Centra la imagen horizontalmente y añade un pequeño margen */
+        }
+
         /* Ajustes para dispositivos móviles y responsive design */
         @media (max-width: 768px) {
             .video-container img {
@@ -408,6 +415,13 @@
                 /* Permite que el botón se expanda acorde al contenedor en dispositivos móviles */
                 margin-top: 20px;
                 /* Aumenta el espacio sobre el botón si es necesario */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .video-container img {
+                width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+                margin: 0 auto; /* Elimina los márgenes externos para maximizar el espacio */
             }
         }
 
