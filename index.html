@@ -261,10 +261,8 @@
         /* Estilos adicionales aquí... */
 
 
-        /* styles.css */
-        .popup {
+        /* .popup {
             display: none;
-            /* Hide popup by default */
             position: fixed;
             z-index: 1;
             left: 0;
@@ -273,9 +271,10 @@
             height: 100%;
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.6);
-            /* Slightly darker background */
             opacity: 0;
             transition: opacity 0.5s;
+            justify-content: center;
+            align-items: center; 
         }
 
         .popup-content {
@@ -286,13 +285,9 @@
             width: 80%;
             max-width: 450px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* Add shadow for depth */
             border-radius: 10px;
-            /* Rounded corners */
             transform: scale(1.1);
-            /* Start slightly scaled up */
             transition: transform 0.5s, opacity 0.5s;
-            /* Smooth transform */
         }
 
         .popup.show {
@@ -302,7 +297,55 @@
 
         .popup-content.show {
             transform: scale(1);
-            /* Scale to normal size */
+        } */
+
+        .popup {
+            display: none;
+            /* Esconde el popup por defecto */
+            position: fixed;
+            z-index: 10;
+            /* Asegúrate de que es alto para que el popup esté sobre otros contenidos */
+            left: 50%;
+            /* Centrado horizontal respecto al lado izquierdo */
+            top: 50%;
+            /* Centrado vertical respecto al lado superior */
+            transform: translate(-50%, -50%);
+            /* Ajusta la posición exacta al centro */
+            width: 100%;
+            /* Asegura cobertura completa horizontal */
+            height: 100%;
+            /* Asegura cobertura completa vertical */
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Fondo oscuro semi-transparente */
+            opacity: 0;
+            transition: opacity 0.5s;
+            /* Suaviza la transición de aparición */
+        }
+
+        .popup-content {
+            background-color: #fff;
+            top: 30%;
+            padding: 20px;
+            border: 1px solid #888;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            position: relative;
+            /* Posicionamiento relativo dentro del contenedor fijo */
+            margin: auto;
+            /* Ayuda a centrar dentro de la vista flex */
+            width: 90%;
+            /* Ajuste de ancho máximo */
+            max-width: 450px;
+            /* Máximo ancho permitido */
+            transition: transform 0.3s ease;
+            /* Transiciones suaves al abrir */
+        }
+
+        .popup.show {
+            display: block;
+            /* Cambia a block para hacerlo visible */
+            opacity: 1;
+            /* Hace el popup completamente opaco cuando es visible */
         }
 
         .close {
@@ -342,6 +385,41 @@
         input[type="submit"]:hover {
             background-color: #45a049;
             /* Darker green on hover */
+        }
+
+        /* Ajustes para dispositivos móviles y responsive design */
+        @media (max-width: 768px) {
+            .video-container img {
+                width: 100%;
+                /* Asegura que la imagen ocupe todo el ancho en dispositivos pequeños */
+                height: auto;
+                /* Mantiene la proporción de la imagen */
+                object-fit: cover;
+                /* Asegura que la imagen cubra el área sin deformarse */
+            }
+
+            .content {
+                padding: 20px;
+                /* Agrega algo de padding en dispositivos móviles */
+            }
+
+            .btn-yellow {
+                max-width: 100%;
+                /* Permite que el botón se expanda acorde al contenedor en dispositivos móviles */
+                margin-top: 20px;
+                /* Aumenta el espacio sobre el botón si es necesario */
+            }
+        }
+
+        /* Específico para Safari */
+        /* _Este estilo afecta a todos los navegadores WebKit, que incluyen Chrome en iOS y Safari en Mac e iOS_ */
+        @media not all and (min-resolution:.001dpcm) {
+            @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+                .btn-yellow {
+                    margin-top: 30px;
+                    /* Ajusta específicamente para Safari */
+                }
+            }
         }
     </style>
 </head>
