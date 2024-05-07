@@ -1,341 +1,935 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US">
+<!-- Mirrored from landpress.keydesign.xyz/online-course/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Apr 2024 20:43:23 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
     <meta charset="UTF-8">
-    <title>Título de la Página</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" id="google-fonts-1-css"
-        href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.4.3"
-        media="all">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Course &#8211; Marketing Landing Page Elementor WordPress Theme</title>
+    <link rel="preconnect" href="../../fonts.gstatic.com/index.html" crossorigin />
+    <link rel="preconnect" href="../../fonts.googleapis.com/index.html" />
+    <style type="text/css">
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeAZ9hjQ.ttf) format('truetype');
         }
 
-        body {
-            background: #121212;
-            color: white;
-            line-height: 1.6;
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 200;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfAZ9hjQ.ttf) format('truetype');
         }
 
-        /* Estilos del encabezado */
-        header {
-            background: linear-gradient(135deg, #1c1c1c 0%, #363636 100%);
-            padding: 20px;
-            text-align: center;
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfAZ9hjQ.ttf) format('truetype');
         }
 
-        header img.logo {
-            width: 150px;
-            /* Ajusta según el tamaño real de tu logo */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjQ.ttf) format('truetype');
         }
 
-        /* Estilos de la sección principal */
-        /* .hero {
-            background: linear-gradient(to bottom, #333 0%, #1a1a1a 100%);
-            text-align: center;
-            padding: 50px 20px;
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hjQ.ttf) format('truetype');
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hjQ.ttf) format('truetype');
         }
 
-        .hero p {
-            margin-bottom: 40px; 
-        }*/
-
-        .hero {
-            position: relative;
-            text-align: center;
-            padding: 50px 20px;
-            color: white;
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hjQ.ttf) format('truetype');
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('images/chris-dubai.png') no-repeat center center;
-            background-size: cover;
-            opacity: 0.2;
-            /* Ajusta este valor para la opacidad deseada */
-            z-index: -1;
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyYAZ9hjQ.ttf) format('truetype');
         }
 
-        /* Asegúrate de ajustar el resto del CSS de .hero como prefieras */
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuBWYAZ9hjQ.ttf) format('truetype');
         }
-
-        .hero p {
-            margin-bottom: 40px;
-        }
-
-        /*section of calendly*/
-        /* .schedule {
-            background: white;
-            text-align: center;
-            color: black;
-            padding: 50px 20px;
-        }
-
-        .schedule h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .schedule p {
-            margin-bottom: 40px;
-        } */
-
-        .schedule {
-            position: relative;
-            text-align: center;
-            padding: 50px 20px;
-            color: black;
-        }
-
-        .schedule::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('images/chris-dubai.png') no-repeat center center;
-            background-size: cover;
-            /* Ajusta este valor según la opacidad que desees */
-            z-index: -1;
-        }
-
-        .schedule h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            /* Asegúrate de que el color del texto contrasta con tu imagen de fondo */
-        }
-
-        .schedule p {
-            margin-bottom: 40px;
-            /* Más estilos para tus párrafos aquí */
-        }
-
-        /* Contenedor de video */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            /* Proporción 16:9 */
-            height: 0;
-            overflow: hidden;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Estilos para texto resaltado */
-        .highlight-yellow {
-            color: #ffd700;
-        }
-
-        .highlight-blue {
-            color: #00bfff;
-        }
-
-        .content {
-            max-width: 600px;
-            /* O el ancho que prefieras */
-            margin: auto;
-        }
-
-        .quote {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            /* Espacio entre los botones */
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            background-color: #e600e6;
-            /* Color de fondo de los botones */
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-            /* O el tamaño que prefieras */
-            text-transform: uppercase;
-        }
-
-        .btn-yellow {
-            background-color: yellow;
-            color: #121212;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-            /* O el tamaño que prefieras */
-            text-transform: uppercase;
-        }
-
-        .btn:hover {
-            background-color: #ff1aff;
-            /* Color al pasar el ratón */
-        }
-
-        .notice {
-            font-size: 0.9em;
-        }
-
-        @keyframes shakeZoom {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            25% {
-                transform: scale(1.1) rotate(-4deg);
-            }
-
-            50% {
-                transform: scale(1) rotate(4deg);
-            }
-
-            75% {
-                transform: scale(1.1) rotate(-4deg);
-            }
-        }
-
-        .btn-purple {
-            background-color: #e600e6;
-            /* Color de fondo de los botones */
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-            text-transform: uppercase;
-            /* animation: shakeZoom 1s ease-in-out 0s infinite alternate; */
-        }
-
-        .btn:hover {
-            background-color: #ff1aff;
-        }
-
-        .notice {
-            font-size: 0.9em;
-        }
-
-        /* Estilos adicionales aquí... */
     </style>
+    <link rel="stylesheet" id="siteground-optimizer-combined-css-d6212d11b116fc4ce795a3279ed3ea45"
+        href="wp-content/uploads/sites/13/siteground-optimizer-assets/siteground-optimizer-combined-css-d6212d11b116fc4ce795a3279ed3ea45.css"
+        media="all" />
+    <link rel="preload"
+        href="wp-content/uploads/sites/13/siteground-optimizer-assets/siteground-optimizer-combined-css-d6212d11b116fc4ce795a3279ed3ea45.css"
+        as="style">
+    <meta name='robots' content='noindex, nofollow' />
+    <link rel="alternate" type="application/rss+xml" title="Online Course &raquo; Feed"
+        href="https://landpress.keydesign.xyz/online-course/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Online Course &raquo; Comments Feed"
+        href="https://landpress.keydesign.xyz/online-course/comments/feed/" />
+    <script> window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/landpress.keydesign.xyz\/online-course\/wp-includes\/js\/wp-emoji-release.min.js" } };
+        /*! This file is auto-generated */
+        !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
+    </script>
+    <style>
+        .popup {
+            display: none;
+            /* Esconde el popup por defecto */
+            position: fixed;
+            z-index: 10;
+            /* Asegúrate de que es alto para que el popup esté sobre otros contenidos */
+            left: 50%;
+            /* Centrado horizontal respecto al lado izquierdo */
+            top: 50%;
+            /* Centrado vertical respecto al lado superior */
+            transform: translate(-50%, -50%);
+            /* Ajusta la posición exacta al centro */
+            width: 100%;
+            /* Asegura cobertura completa horizontal */
+            height: 100%;
+            /* Asegura cobertura completa vertical */
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Fondo oscuro semi-transparente */
+            opacity: 0;
+            transition: opacity 0.5s;
+            /* Suaviza la transición de aparición */
+        }
+
+        .popup-content {
+            background-color: #fff;
+            top: 30%;
+            padding: 20px;
+            border: 1px solid #888;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            position: relative;
+            /* Posicionamiento relativo dentro del contenedor fijo */
+            margin: auto;
+            /* Ayuda a centrar dentro de la vista flex */
+            width: 90%;
+            /* Ajuste de ancho máximo */
+            max-width: 450px;
+            /* Máximo ancho permitido */
+            transition: transform 0.3s ease;
+            /* Transiciones suaves al abrir */
+        }
+
+        .popup.show {
+            display: block;
+            /* Cambia a block para hacerlo visible */
+            opacity: 1;
+            /* Hace el popup completamente opaco cuando es visible */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            /* Full width */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            /* Rounded edges for input fields */
+        }
+
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            align-self: center;
+
+            /* Darker green on hover */
+        }
+
+        .video-container img {
+            width: 90%;
+            /* Establece un ancho relativo al contenedor para no sobrepasar los límites */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+            object-fit: contain;
+            /* Asegura que toda la imagen se muestre completamente */
+            margin: 10px auto;
+            /* Centra la imagen horizontalmente y añade un pequeño margen */
+        }
+
+        /* Ajustes para dispositivos móviles y responsive design */
+        @media (max-width: 768px) {
+            .video-container img {
+                width: 100%;
+                /* Asegura que la imagen ocupe todo el ancho en dispositivos pequeños */
+                height: auto;
+                /* Mantiene la proporción de la imagen */
+                object-fit: cover;
+                /* Asegura que la imagen cubra el área sin deformarse */
+            }
+
+            .content {
+                padding: 20px;
+                /* Agrega algo de padding en dispositivos móviles */
+            }
+
+            .btn-yellow {
+                max-width: 100%;
+                /* Permite que el botón se expanda acorde al contenedor en dispositivos móviles */
+                margin-top: 20px;
+                /* Aumenta el espacio sobre el botón si es necesario */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .video-container img {
+                width: 100%;
+                /* Hace que la imagen ocupe todo el ancho disponible */
+                margin: 0 auto;
+                /* Elimina los márgenes externos para maximizar el espacio */
+            }
+        }
+
+        /* Específico para Safari */
+        /* _Este estilo afecta a todos los navegadores WebKit, que incluyen Chrome en iOS y Safari en Mac e iOS_ */
+        @media not all and (min-resolution:.001dpcm) {
+            @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+                .btn-yellow {
+                    margin-top: 30px;
+                    /* Ajusta específicamente para Safari */
+                }
+            }
+        }
+    </style>
+    <style id='wp-emoji-styles-inline-css'>
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <style id='keydesign-frontend-inline-css'>
+        body {}
+
+        .page-header {
+            --page-title-width: 600px;
+        }
+
+        .gradient-icon-box .elementskit-info-box-icon,
+        .site .ekit-wid-con .ekit-form form input[type=submit],
+        .gradient-bg {
+            background: linear-gradient(106deg, var(--e-global-color-accent) 0%, var(--e-global-color-primary) 65.07%, var(--e-global-color-secondary) 100%);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <script src="https://landpress.keydesign.xyz/online-course/wp-includes/js/jquery/jquery.min.js"
+        id="jquery-core-js"></script>
+    <script src="https://landpress.keydesign.xyz/online-course/wp-includes/js/jquery/jquery-migrate.min.js"
+        id="jquery-migrate-js"></script>
+    <script defer
+        src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/keydesign-go-top.min.js"
+        id="keydesign-go-top-js"></script>
+    <script defer
+        src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/keydesign-smooth-scroll.min.js"
+        id="keydesign-smooth-scroll-js"></script>
+    <script defer
+        src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/jarallax.min.js"
+        id="jarallax-js"></script>
+    <link rel="https://api.w.org/" href="https://landpress.keydesign.xyz/online-course/wp-json/" />
+    <link rel="alternate" type="application/json"
+        href="https://landpress.keydesign.xyz/online-course/wp-json/wp/v2/pages/9" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD"
+        href="https://landpress.keydesign.xyz/online-course/xmlrpc.php?rsd" />
+    <meta name="generator" content="WordPress 6.5.2" />
+    <link rel="canonical" href="https://landpress.keydesign.xyz/online-course/" />
+    <link rel='shortlink' href='https://landpress.keydesign.xyz/online-course/' />
+    <link rel="alternate" type="application/json+oembed"
+        href="https://landpress.keydesign.xyz/online-course/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flandpress.keydesign.xyz%2Fonline-course%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="https://landpress.keydesign.xyz/online-course/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flandpress.keydesign.xyz%2Fonline-course%2F&amp;format=xml" />
+    <script
+        type="text/javascript"> var stm_wpcfto_ajaxurl = 'https://landpress.keydesign.xyz/online-course/wp-admin/admin-ajax.php'; </script>
+    <style>
+        .vue_is_disabled {
+            display: none;
+        }
+    </style>
+    <script> var stm_wpcfto_nonces = { "wpcfto_save_settings": "a55235b4ad", "get_image_url": "1415887e6e", "wpcfto_upload_file": "a110d61fbb", "wpcfto_search_posts": "34658c9549" }; </script>
+    <meta name="generator"
+        content="Elementor 3.21.1; features: e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+    <script
+        type="text/javascript"> var elementskit_module_parallax_url = "https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementskit/modules/parallax/" </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2L7RHR7YW"></script>
+    <script> window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-B2L7RHR7YW'); </script>
 </head>
 
-<body>
-    <header>
-        <img style="width: 250px;" fetchpriority="high" decoding="async" src="./com-logo.png"
-            class="attachment-full size-full wp-image-50" alt="" sizes="(max-width: 1080px) 10vw, 1080px">
-    </header>
+<body
+    class="home page-template-default page page-id-9  underline-link-effect flip-button-effect keydesign-elementor-library elementor-default elementor-kit-7 elementor-page elementor-page-9">
+    <div id="page" class="site">
+        <header id="site-header" class="site-header sticky-header show-on-scroll">
+            <div class="site-header-wrapper">
+                <div
+                    class="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
+                    <div data-elementor-type="wp-post" data-elementor-id="23807" class="elementor elementor-23807">
+                        <div class="elementor-element elementor-element-4f16b2e5 e-flex e-con-boxed e-con e-parent"
+                            data-id="4f16b2e5" data-element_type="container"
+                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div class="e-con-inner">
+                                <div class="elementor-element elementor-element-26559631 e-flex e-con-boxed e-con e-child"
+                                    data-id="26559631" data-element_type="container">
+                                    <div class="e-con-inner">
+                                        <div class="elementor-element elementor-element-439fa31 e-con-full e-flex e-con e-child"
+                                            data-id="439fa31" data-element_type="container">
+                                            <div class="elementor-element elementor-element-30e2744d elementor-widget elementor-widget-kd_site_logo"
+                                                data-id="30e2744d" data-element_type="widget"
+                                                data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                                data-widget_type="kd_site_logo.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="site-logo-wrapper"> <a class="site-logo" href="#"> <span
+                                                                class="primary-logo"><img width="300" height="120"
+                                                                    src="images/logo_white.png"
+                                                                    class="attachment-full size-full wp-image-24009"
+                                                                    alt="" /></span>
+                                                            <span class="secondary-logo">
+                                                                <img width="220" height="80"
+                                                                    src="https://i.ibb.co/S5chY65/logo-bg-removed.png"
+                                                                    class="attachment-full size-full wp-image-24009"
+                                                                    alt="" />
+                                                            </span> </a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-6583e61b e-con-full e-flex e-con e-child"
+                                            data-id="6583e61b" data-element_type="container">
+                                            <div class="elementor-element elementor-element-3151efa7 elementor-widget elementor-widget-ekit-nav-menu"
+                                                data-id="3151efa7" data-element_type="widget"
+                                                data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                                data-widget_type="ekit-nav-menu.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con ekit_menu_responsive_tablet"
+                                                        data-hamburger-icon="" data-hamburger-icon-type="icon"
+                                                        data-responsive-breakpoint="1024"> <button
+                                                            class="elementskit-menu-hamburger elementskit-menu-toggler"
+                                                            type="button" aria-label="hamburger-icon"> <span
+                                                                class="elementskit-menu-hamburger-icon"></span><span
+                                                                class="elementskit-menu-hamburger-icon"></span><span
+                                                                class="elementskit-menu-hamburger-icon"></span>
+                                                        </button>
+                                                        <div id="ekit-megamenu-main-menu"
+                                                            class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-yes ekit-nav-dropdown-hover">
 
-    <section class="hero">
-        <!-- Contenido del hero, por ejemplo, título y subtítulo -->
-        <h1 style="color: white; font-size:xx-large;"><strong>Cómo escalar las ventas de tu &nbsp;<span
-                    style="color: #33cccc;">producto digital</span> de <span
-                    style="color: #ffff00;">$10k</span></strong> a <span style="color: #ffff00;"> 100k /mes </span></h1>
-        <p style="font-size: large; font-style: italic; letter-spacing: 4.5px;">TALLER 100% ONLINE GRATUITO, MIRA EL
-            VÍDEO PARA CONTINUAR</p>
-        <!-- Contenedor para el video -->
-        <div class="video-container">
-            <!-- <iframe src="https://player.vimeo.com/video/938915637?h=2a9aa0dbc6&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/Dl2k8qJUmxA?si=-Bu94Ag072DhI-td?autoplay=1&mute=1&enablejsapi=1"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-        <!--Seccion de botones de accion-->
-        <div class="content">
-            <br>
-            <br>
-            <p class="quote" style="color: yellow; letter-spacing: 2.5px; font-size: larger;">«<b>Ahorra</b> tiempo y
-                <b>Acelera</b> tu Facturación con 1 Partner.»
-            </p>
-
-            <div class="buttons">
-                <button type="button" class="btn-yellow" style="margin-right: 20px;"
-                    onclick="location.href = 'index2.html'">Si quiero pertenecer a la comunidad de creadores</button>
-                <button type="button" class="btn-purple" onclick="location.href='#schedule-sect'">Quiero un Partner Para mi
-                    Negocio Digital</button>
+                                                            <div class="elementskit-nav-identity-panel">
+                                                                <div class="elementskit-site-title"> <a
+                                                                        class="elementskit-nav-logo"
+                                                                        href="https://landpress.keydesign.xyz/online-course"
+                                                                        target="_self" rel=""> <img src="#" title=""
+                                                                            alt="" /> </a></div><button
+                                                                    class="elementskit-menu-close elementskit-menu-toggler"
+                                                                    type="button">X</button>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-212430ff e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child"
+                                            data-id="212430ff" data-element_type="container">
+                                            <div class="elementor-element elementor-element-1fbba71 elementor-widget elementor-widget-elementskit-button"
+                                                data-id="1fbba71" data-element_type="widget"
+                                                data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                                data-widget_type="elementskit-button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con">
+                                                        <div class="ekit-btn-wraper"> <a href="#content"
+                                                                class="elementskit-btn gradient-bg whitespace--normal"
+                                                                id=""> Ver video </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </header>
+        <section id="content" class="site-content">
+            <div id="primary" class="content-area" data-attr="single-page">
+                <main id="main" class="site-main" role="main">
+                    <article id="post-9" class="post-9 page type-page status-publish hentry">
+                        <div class="entry-content">
+                            <div data-elementor-type="wp-page" data-elementor-id="9" class="elementor elementor-9">
+                                <div class="elementor-element elementor-element-5fdb1df hero-section e-flex e-con-boxed e-con e-parent"
+                                    data-id="5fdb1df" data-element_type="container"
+                                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_bottom&quot;:&quot;wave-brush&quot;}">
+                                    <div class="e-con-inner">
+                                        <div class="elementor-shape elementor-shape-bottom" data-negative="false"> <svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8"
+                                                preserveAspectRatio="none">
+                                                <path class="elementor-shape-fill"
+                                                    d="M283.5,9.7c0,0-7.3,4.3-14,4.6c-6.8,0.3-12.6,0-20.9-1.5c-11.3-2-33.1-10.1-44.7-5.7	s-12.1,4.6-18,7.4c-6.6,3.2-20,9.6-36.6,9.3C131.6,23.5,99.5,7.2,86.3,8c-1.4,0.1-6.6,0.8-10.5,2c-3.8,1.2-9.4,3.8-17,4.7	c-3.2,0.4-8.3,1.1-14.2,0.9c-1.5-0.1-6.3-0.4-12-1.6c-5.7-1.2-11-3.1-15.8-3.7C6.5,9.2,0,10.8,0,10.8V0h283.5V9.7z M260.8,11.3	c-0.7-1-2-0.4-4.3-0.4c-2.3,0-6.1-1.2-5.8-1.1c0.3,0.1,3.1,1.5,6,1.9C259.7,12.2,261.4,12.3,260.8,11.3z M242.4,8.6	c0,0-2.4-0.2-5.6-0.9c-3.2-0.8-10.3-2.8-15.1-3.5c-8.2-1.1-15.8,0-15.1,0.1c0.8,0.1,9.6-0.6,17.6,1.1c3.3,0.7,9.3,2.2,12.4,2.7	C239.9,8.7,242.4,8.6,242.4,8.6z M185.2,8.5c1.7-0.7-13.3,4.7-18.5,6.1c-2.1,0.6-6.2,1.6-10,2c-3.9,0.4-8.9,0.4-8.8,0.5	c0,0.2,5.8,0.8,11.2,0c5.4-0.8,5.2-1.1,7.6-1.6C170.5,14.7,183.5,9.2,185.2,8.5z M199.1,6.9c0.2,0-0.8-0.4-4.8,1.1	c-4,1.5-6.7,3.5-6.9,3.7c-0.2,0.1,3.5-1.8,6.6-3C197,7.5,199,6.9,199.1,6.9z M283,6c-0.1,0.1-1.9,1.1-4.8,2.5s-6.9,2.8-6.7,2.7	c0.2,0,3.5-0.6,7.4-2.5C282.8,6.8,283.1,5.9,283,6z M31.3,11.6c0.1-0.2-1.9-0.2-4.5-1.2s-5.4-1.6-7.8-2C15,7.6,7.3,8.5,7.7,8.6	C8,8.7,15.9,8.3,20.2,9.3c2.2,0.5,2.4,0.5,5.7,1.6S31.2,11.9,31.3,11.6z M73,9.2c0.4-0.1,3.5-1.6,8.4-2.6c4.9-1.1,8.9-0.5,8.9-0.8	c0-0.3-1-0.9-6.2-0.3S72.6,9.3,73,9.2z M71.6,6.7C71.8,6.8,75,5.4,77.3,5c2.3-0.3,1.9-0.5,1.9-0.6c0-0.1-1.1-0.2-2.7,0.2	C74.8,5.1,71.4,6.6,71.6,6.7z M93.6,4.4c0.1,0.2,3.5,0.8,5.6,1.8c2.1,1,1.8,0.6,1.9,0.5c0.1-0.1-0.8-0.8-2.4-1.3	C97.1,4.8,93.5,4.2,93.6,4.4z M65.4,11.1c-0.1,0.3,0.3,0.5,1.9-0.2s2.6-1.3,2.2-1.2s-0.9,0.4-2.5,0.8C65.3,10.9,65.5,10.8,65.4,11.1	z M34.5,12.4c-0.2,0,2.1,0.8,3.3,0.9c1.2,0.1,2,0.1,2-0.2c0-0.3-0.1-0.5-1.6-0.4C36.6,12.8,34.7,12.4,34.5,12.4z M152.2,21.1	c-0.1,0.1-2.4-0.3-7.5-0.3c-5,0-13.6-2.4-17.2-3.5c-3.6-1.1,10,3.9,16.5,4.1C150.5,21.6,152.3,21,152.2,21.1z" />
+                                                <path class="elementor-shape-fill"
+                                                    d="M269.6,18c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3	C267.7,18.8,269.7,18,269.6,18z" />
+                                                <path class="elementor-shape-fill"
+                                                    d="M227.4,9.8c-0.2-0.1-4.5-1-9.5-1.2c-5-0.2-12.7,0.6-12.3,0.5c0.3-0.1,5.9-1.8,13.3-1.2	S227.6,9.9,227.4,9.8z" />
+                                                <path class="elementor-shape-fill"
+                                                    d="M204.5,13.4c-0.1-0.1,2-1,3.2-1.1c1.2-0.1,2,0,2,0.3c0,0.3-0.1,0.5-1.6,0.4	C206.4,12.9,204.6,13.5,204.5,13.4z" />
+                                                <path class="elementor-shape-fill"
+                                                    d="M201,10.6c0-0.1-4.4,1.2-6.3,2.2c-1.9,0.9-6.2,3.1-6.1,3.1c0.1,0.1,4.2-1.6,6.3-2.6	S201,10.7,201,10.6z" />
+                                                <path class="elementor-shape-fill"
+                                                    d="M154.5,26.7c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3	C152.6,27.5,154.6,26.8,154.5,26.7z" />
+                                                <path class="elementor-shape-fill"
+                                                    d="M41.9,19.3c0,0,1.2-0.3,2.9-0.1c1.7,0.2,5.8,0.9,8.2,0.7c4.2-0.4,7.4-2.7,7-2.6	c-0.4,0-4.3,2.2-8.6,1.9c-1.8-0.1-5.1-0.5-6.7-0.4S41.9,19.3,41.9,19.3z" />
+                                                <path class="elementor-shape-fill"
+                                                    d="M75.5,12.6c0.2,0.1,2-0.8,4.3-1.1c2.3-0.2,2.1-0.3,2.1-0.5c0-0.1-1.8-0.4-3.4,0	C76.9,11.5,75.3,12.5,75.5,12.6z" />
+                                                <path class="elementor-shape-fill"
+                                                    d="M15.6,13.2c0-0.1,4.3,0,6.7,0.5c2.4,0.5,5,1.9,5,2c0,0.1-2.7-0.8-5.1-1.4	C19.9,13.7,15.7,13.3,15.6,13.2z" />
+                                            </svg></div>
+                                        <div class="elementor-element elementor-element-c1fc583 e-con-full e-flex e-con e-child"
+                                            data-id="c1fc583" data-element_type="container">
+                                            <div class="elementor-element elementor-element-7fbb63c e-con-full e-flex e-con e-child"
+                                                data-id="7fbb63c" data-element_type="container">
+                                                <div class="elementor-element elementor-element-ed9a3ca elementor-widget__width-initial elementor-widget elementor-widget-elementskit-heading"
+                                                    data-id="ed9a3ca" data-element_type="widget"
+                                                    data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                                    data-widget_type="elementskit-heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="ekit-wid-con">
+                                                            <div
+                                                                class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-text_center">
+                                                                <h1
+                                                                    class="ekit-heading--title elementskit-section-title ">
+                                                                    Cómo escalar las ventas de tu producto digital de
+                                                                    $10k a 100k /mes</h1>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div style="margin: 10px; margin-left: 20px; margin-right: 20px;">
+                                                <iframe
+                                                    src="https://www.youtube.com/embed/Dl2k8qJUmxA?si=SYEeVI52hjtpvTMu"
+                                                    title="YouTube video player" frameborder="0"
+                                                    style="height: 750px; width: 100%;"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    referrerpolicy="strict-origin-when-cross-origin"
+                                                    allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-6582f03 e-flex e-con-boxed e-con e-parent"
+                                    data-id="6582f03" data-element_type="container"
+                                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="e-con-inner">
+                                        <div class="elementor-element elementor-element-fdd84e7 e-con-full e-flex e-con e-child"
+                                            data-id="fdd84e7" data-element_type="container">
+                                            <div class="elementor-element elementor-element-4aa91da e-con-full e-flex e-con e-child"
+                                                data-id="4aa91da" data-element_type="container">
+                                                <div class="elementor-element elementor-element-b7b9201 animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-heading"
+                                                    data-id="b7b9201" data-element_type="widget"
+                                                    data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:100,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                                    data-widget_type="elementskit-heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="ekit-wid-con">
+                                                            <div
+                                                                class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-text_left">
+                                                                <h6
+                                                                    class="elementskit-section-subtitle elementskit-gradient-title ">
+                                                                    «Ahorra tiempo y Acelera tu Facturación con 1
+                                                                    Partner.»</h6>
+                                                                <h2
+                                                                    class="ekit-heading--title elementskit-section-title ">
+                                                                    Cónoce el método "Comunidad Millonaria"</h2>
+                                                                <div class='ekit-heading__description'>
+                                                                    <p>Ideal para creadores de contenido que no conocen
+                                                                        la estratégia para llevar sus marcas personales
+                                                                        y productos digitales a una facturación
+                                                                        constante.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        style="margin: 10px; padding: 10px; margin-top: 10%; display: flex; justify-content: space-between; align-items: center;">
+                                                        <div class="elementor-widget-container"
+                                                            style="flex: 1; margin-right: 5px;">
+                                                            <div class="ekit-wid-con">
+                                                                <div class="ekit-btn-wraper">
+                                                                    <input type="submit"
+                                                                        onclick="location.href = 'index2.html'"
+                                                                        class="elementskit-btn gradient-bg whitespace--normal"
+                                                                        value="SI QUIERO PERTENECER A LA COMUNIDAD DE CREADORES"
+                                                                        style="
+            width: 100%;
+            height: 20%;
+            transition: transform 0.2s ease-in-out;
+          " onmouseover="this.style.transform = 'scale(1.05)';" onmouseout="this.style.transform = 'scale(1)';" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-widget-container"
+                                                            style="flex: 1; margin-left: 5px;">
+                                                            <div class="ekit-wid-con">
+                                                                <div class="ekit-btn-wraper">
+                                                                    <input type="submit"
+                                                                        onclick="location.href = '#schedule-sect'"
+                                                                        class="elementskit-btn gradient-bg whitespace--normal"
+                                                                        value="QUIERO UN PARTNER PARA MI NEGOCIO DIGITAL"
+                                                                        style="
+            width: 100%;
+            height: 100%;
+            transition: transform 0.2s ease-in-out;
+          " onmouseover="this.style.transform = 'scale(1.05)';" onmouseout="this.style.transform = 'scale(1)';" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                    </article>
+                </main><!-- #main -->
+            </div><!-- #primary -->
+        </section><!-- #content -->
+        <br>
+        <section class="schedule" id="schedule-sect" style="padding: 10px; ">
+            <br>
+            <br>
+            <br>
             <br>
 
-            <p class="notice" style="font-size: large;">Cupos limitados, si no accedes HOY no podrás acceder mañana</p>
-        </div>
-    </section>
+            <!-- Contenido del hero, por ejemplo, título y subtítulo -->
+            <div class="elementor-widget-container">
+                <div class="ekit-wid-con">
+                    <div
+                        class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-text_left">
+                        <h6 class="elementskit-section-subtitle elementskit-gradient-title ">
+                            «¿Quieres algunos tips de tu marca personal?.»</h6>
+                        <h2 class="ekit-heading--title elementskit-section-title ">
+                            Agenda una sesión estratégica conmigo</h2>
+                        <div class='ekit-heading__description'>
+                            <p>Te compartiré la estratégia perfecta para vender tu producto digital como creador 100% GRATIS
 
-
-    <section class="schedule" id="schedule-sect">
-
-        <!-- Contenido del hero, por ejemplo, título y subtítulo -->
-        <h1 style="color: black;">Agenda una sesión estratégica 1 a 1</h1>
-        <p style="font-size: large; font-style: italic; letter-spacing: 4.5px;">Te compartiremos la estratégia perfecta
-            para vender tu producto digital como creador 100% GRATIS</p>
-        <!-- Contenedor para el video -->
-        <div>
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Calendly inline widget begin -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/communitypartners20/30min"
                 style="min-width:320px;height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             <!-- Calendly inline widget end -->
 
-        </div>
+    </div>
 
-        <!--Seccion de botones de accion-->
-        <div class="content">
-            <br>
-            <br>
-            <br>
-            <br>
-            <p class="notice">NOT FACEBOOK: This site is not a part of the Facebook website or Facebook Inc.
-                Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK,
-                Inc.</p>
-            <br>
-            <br>
-            <p class="notice">Communitypartners | Chris Branders 2024 todos los derechos reservados
+    <!--Seccion de botones de accion-->
 
-            </p>
-        </div>
+    
+
 
     </section>
+    
+    <br>
+    <footer id="site-footer" class="site-footer footer-position-default" role="contentinfo" style="margin-top: 30%;">
+        <div class="ekit-template-content-markup ekit-template-content-footer ekit-template-content-theme-support">
+            <div data-elementor-type="wp-post" data-elementor-id="23748" class="elementor elementor-23748">
+                <div class="elementor-element elementor-element-7923593 e-con-full e-flex e-con e-parent"
+                    data-id="7923593" data-element_type="container"
+                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-element elementor-element-158a673 e-flex e-con-boxed e-con e-child"
+                        data-id="158a673" data-element_type="container">
+                        <div class="e-con-inner">
+                            <div class="elementor-element elementor-element-b268d5b e-con-full e-flex e-con e-child"
+                                data-id="b268d5b" data-element_type="container">
+                                <div class="elementor-element elementor-element-ecab7a9 elementor-mobile-align-left elementor-icon-list--layout-inline elementor-tablet-align-left elementor-list-item-link-inline elementor-widget elementor-widget-icon-list"
+                                    data-id="ecab7a9" data-element_type="widget"
+                                    data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                    data-widget_type="icon-list.default">
+                                    <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items elementor-inline-items">
+                                            <li class="elementor-icon-list-item elementor-inline-item"> <a href="#">
+                                                    <span class="elementor-icon-list-text">Terminos</span> </a></li>
+                                            <li class="elementor-icon-list-item elementor-inline-item"> <a href="#">
+                                                    <span class="elementor-icon-list-text">Acerca de</span> </a>
+                                            </li>
+                                            <li class="elementor-icon-list-item elementor-inline-item"> <a href="#">
+                                                    <span class="elementor-icon-list-text">Contacto</span> </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-e18bb57 e-con-full elementor-hidden-mobile e-flex e-con e-child"
+                                data-id="e18bb57" data-element_type="container">
+                                <div class="elementor-element elementor-element-9c0a012 elementor-widget elementor-widget-elementskit-social-media"
+                                    data-id="9c0a012" data-element_type="widget"
+                                    data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                    data-widget_type="elementskit-social-media.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="ekit-wid-con">
+                                            <ul class="ekit_social_media">
+                                                <li class="elementor-repeater-item-0825b5a"> <a
+                                                        href="https://www.youtube.com/@chrisbranders_crocs"
+                                                        aria-label="Twitter" class="twitter"> <svg
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                                                            style="margin-right: 10px;"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                            <path
+                                                                d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                                                        </svg> YouTube </a></li>
+                                                <li class="elementor-repeater-item-fa40825"> <a
+                                                        href="https://www.instagram.com/chrisbranders.croc"
+                                                        aria-label="Instagram" class="instagram"> <svg
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                            style="margin-right: 10px;"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                            <path
+                                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                                        </svg>
+                                                        Instagram </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-633de03 e-flex e-con-boxed e-con e-parent"
+                    data-id="633de03" data-element_type="container"
+                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="e-con-inner">
+                        <div class="elementor-element elementor-element-a7a42e4 e-con-full e-flex e-con e-child"
+                            data-id="a7a42e4" data-element_type="container">
+                            <div class="elementor-element elementor-element-09803d9 e-con-full e-flex e-con e-child"
+                                data-id="09803d9" data-element_type="container">
+                                <div class="elementor-element elementor-element-df64f4e e-con-full e-flex e-con e-child"
+                                    data-id="df64f4e" data-element_type="container">
+                                    <div class="elementor-element elementor-element-f128124 elementor-widget elementor-widget-image"
+                                        data-id="f128124" data-element_type="widget"
+                                        data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                        data-widget_type="image.default">
+                                        <div class="elementor-widget-container"> <a href="#"> <img width="220"
+                                                    height="80" src="images/logo-bg-removed.png"
+                                                    class="attachment-full size-full wp-image-24010" alt="" /> </a>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-19379e6 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+                                        data-id="19379e6" data-element_type="widget"
+                                        data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                        data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
 
-    <footer>
-        <!-- Información del footer aquí -->
-    </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-e51d46d e-con-full e-flex e-con e-child"
+                                    data-id="e51d46d" data-element_type="container">
+                                    <div class="elementor-element elementor-element-b17c6fb elementor-widget elementor-widget-heading"
+                                        data-id="b17c6fb" data-element_type="widget"
+                                        data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                        data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h5 class="elementor-heading-title elementor-size-default">Empieza a
+                                                facturar 10k USD con tu producto digital</h5>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-10b48e6 gradient-form elementor-widget elementor-widget-elementskit-contact-form7"
+                                        data-id="10b48e6" data-element_type="widget"
+                                        data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                        data-widget_type="elementskit-contact-form7.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="ekit-wid-con">
+                                                <div class="ekit-form">
+                                                    <div class="wpcf7 no-js" id="wpcf7-f17128-o1" lang="en-US"
+                                                        dir="ltr">
+                                                        <div class="screen-reader-response">
+                                                            <p role="status" aria-live="polite" aria-atomic="true">
+                                                            </p>
+                                                            <ul></ul>
+                                                        </div>
+                                                        <form
+                                                            action="https://landpress.keydesign.xyz/online-course/#wpcf7-f17128-o1"
+                                                            method="post" class="wpcf7-form init demo"
+                                                            aria-label="Contact form" novalidate="novalidate"
+                                                            data-status="init">
+                                                            <div style="display: none;"> <input type="hidden"
+                                                                    name="_wpcf7" value="17128" /> <input type="hidden"
+                                                                    name="_wpcf7_version" value="5.9.3" /> <input
+                                                                    type="hidden" name="_wpcf7_locale" value="en_US" />
+                                                                <input type="hidden" name="_wpcf7_unit_tag"
+                                                                    value="wpcf7-f17128-o1" /> <input type="hidden"
+                                                                    name="_wpcf7_container_post" value="0" /> <input
+                                                                    type="hidden" name="_wpcf7_posted_data_hash"
+                                                                    value="" /></div>
+                                                            <div class="inline-form">
+                                                                <p><span class="keydesign-label"><label>Email</label><span
+                                                                            class="wpcf7-form-control-wrap"
+                                                                            data-name="your-email"><input size="40"
+                                                                                class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                                                                                aria-required="true"
+                                                                                aria-invalid="false" value=""
+                                                                                type="email"
+                                                                                name="your-email" /></span></span><br />
+                                                                    <input
+                                                                        class="wpcf7-form-control wpcf7-submit has-spinner"
+                                                                        type="submit" value="Quiero info." />
+                                                                </p>
+                                                            </div>
+                                                            <div class="wpcf7-response-output" aria-hidden="true">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-5f03e06 e-con-full e-flex e-con e-parent"
+                    data-id="5f03e06" data-element_type="container"
+                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-element elementor-element-68c291e e-flex e-con-boxed e-con e-child"
+                        data-id="68c291e" data-element_type="container">
+                        <div class="e-con-inner">
+                            <div class="elementor-element elementor-element-61a39ea e-con-full e-flex e-con e-child"
+                                data-id="61a39ea" data-element_type="container">
+                                <div class="elementor-element elementor-element-10f4f23 elementor-widget elementor-widget-text-editor"
+                                    data-id="10f4f23" data-element_type="widget"
+                                    data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
+                                    data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                        <style>
+                                            /*! elementor - v3.21.0 - 18-04-2024 */
+                                            .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+                                                background-color: #69727d;
+                                                color: #fff
+                                            }
+
+                                            .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+                                                color: #69727d;
+                                                border: 3px solid;
+                                                background-color: transparent
+                                            }
+
+                                            .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+                                                margin-top: 8px
+                                            }
+
+                                            .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+                                                width: 1em;
+                                                height: 1em
+                                            }
+
+                                            .elementor-widget-text-editor .elementor-drop-cap {
+                                                float: left;
+                                                text-align: center;
+                                                line-height: 1;
+                                                font-size: 50px
+                                            }
+
+                                            .elementor-widget-text-editor .elementor-drop-cap-letter {
+                                                display: inline-block
+                                            }
+                                        </style>
+                                        <p>© Communitypartners | Chris Branders 2024 todos los derechos reservados
+                                        </p>
+                                        <script>
+                                            function openForm() {
+                                                document.getElementById('emailFormPopup').classList.add('show');
+                                                document.querySelector('.popup-content').classList.add('show');
+                                            }
+
+                                            document.getElementById('video-course-btn').onclick = openForm;
+
+                                            document.querySelector('.close').onclick = function () {
+                                                document.getElementById('emailFormPopup').classList.remove('show');
+                                                document.querySelector('.popup-content').classList.remove('show');
+                                            }
+
+                                            window.onclick = function (event) {
+                                                if (event.target == document.getElementById('emailFormPopup')) {
+                                                    document.getElementById('emailFormPopup').classList.remove('show');
+                                                    document.querySelector('.popup-content').classList.remove('show');
+                                                }
+                                            }
+
+                                            document.getElementById('emailForm').addEventListener('submit', function (event) {
+                                                event.preventDefault();
+                                                const email = document.getElementById('email').value;
+                                                const url = "https://www.howersoftware.io/clients/api/post-email/";
+                                                const data = { email: email };
+
+                                                if (!/\S+@\S+\.\S+/.test(email)) {
+                                                    alert('Por favor ingrese un correo electrónico válido.');
+                                                    return;
+                                                }
+
+                                                fetch(url, {
+                                                    method: 'POST',
+                                                    headers: {
+                                                        'Content-Type': 'application/x-www-form-urlencoded',
+                                                    },
+                                                    body: new URLSearchParams(data)
+                                                })
+                                                    .then(response => {
+                                                        if (response.ok) {
+                                                            return response.text();
+                                                        } else {
+                                                            throw new Error('No se pudo enviar el correo electrónico');
+                                                        }
+                                                    })
+                                                    .then(text => {
+                                                        window.location.href = 'user_access.html';
+                                                    })
+                                                    .catch(error => {
+                                                        console.error('Error durante la petición:', error);
+                                                    });
+                                            });
+                                        </script>
+
+                                        <script defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/swv.min.js"
+                                            id="swv-js"></script>
+                                        <script
+                                            id="contact-form-7-js-extra"> var wpcf7 = { "api": { "root": "https:\/\/landpress.keydesign.xyz\/online-course\/wp-json\/", "namespace": "contact-form-7\/v1" }, "cached": "1" }; </script>
+                                        <script defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/contact-form-7.min.js"
+                                            id="contact-form-7-js"></script>
+                                        <script defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/landpress-scripts.min.js"
+                                            id="landpress-scripts-js"></script>
+                                        <script defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/elementskit-framework-js-frontend.min.js"
+                                            id="elementskit-framework-js-frontend-js"></script>
+                                        <script defer id="elementskit-framework-js-frontend-js-after"> var elementskit = {
+                                                resturl: 'https://landpress.keydesign.xyz/online-course/wp-json/elementskit/v1/',
+                                            } </script>
+                                        <script defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/ekit-widget-scripts.min.js"
+                                            id="ekit-widget-scripts-js"></script>
+                                        <script defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/animejs.min.js"
+                                            id="animejs-js"></script>
+                                        <script defer defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/elementskit-parallax-frontend-defer.min.js"
+                                            id="elementskit-parallax-frontend-defer-js"></script>
+                                        <script defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/uploads/sites/13/siteground-optimizer-assets/keydesign-scripts.min.js"
+                                            id="keydesign-scripts-js"></script>
+                                        <script
+                                            id="mediaelement-core-js-before"> var mejsL10n = { "language": "en", "strings": { "mejs.download-file": "Download File", "mejs.install-flash": "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/", "mejs.fullscreen": "Fullscreen", "mejs.play": "Play", "mejs.pause": "Pause", "mejs.time-slider": "Time Slider", "mejs.time-help-text": "Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.", "mejs.live-broadcast": "Live Broadcast", "mejs.volume-help-text": "Use Up\/Down Arrow keys to increase or decrease volume.", "mejs.unmute": "Unmute", "mejs.mute": "Mute", "mejs.volume-slider": "Volume Slider", "mejs.video-player": "Video Player", "mejs.audio-player": "Audio Player", "mejs.captions-subtitles": "Captions\/Subtitles", "mejs.captions-chapters": "Chapters", "mejs.none": "None", "mejs.afrikaans": "Afrikaans", "mejs.albanian": "Albanian", "mejs.arabic": "Arabic", "mejs.belarusian": "Belarusian", "mejs.bulgarian": "Bulgarian", "mejs.catalan": "Catalan", "mejs.chinese": "Chinese", "mejs.chinese-simplified": "Chinese (Simplified)", "mejs.chinese-traditional": "Chinese (Traditional)", "mejs.croatian": "Croatian", "mejs.czech": "Czech", "mejs.danish": "Danish", "mejs.dutch": "Dutch", "mejs.english": "English", "mejs.estonian": "Estonian", "mejs.filipino": "Filipino", "mejs.finnish": "Finnish", "mejs.french": "French", "mejs.galician": "Galician", "mejs.german": "German", "mejs.greek": "Greek", "mejs.haitian-creole": "Haitian Creole", "mejs.hebrew": "Hebrew", "mejs.hindi": "Hindi", "mejs.hungarian": "Hungarian", "mejs.icelandic": "Icelandic", "mejs.indonesian": "Indonesian", "mejs.irish": "Irish", "mejs.italian": "Italian", "mejs.japanese": "Japanese", "mejs.korean": "Korean", "mejs.latvian": "Latvian", "mejs.lithuanian": "Lithuanian", "mejs.macedonian": "Macedonian", "mejs.malay": "Malay", "mejs.maltese": "Maltese", "mejs.norwegian": "Norwegian", "mejs.persian": "Persian", "mejs.polish": "Polish", "mejs.portuguese": "Portuguese", "mejs.romanian": "Romanian", "mejs.russian": "Russian", "mejs.serbian": "Serbian", "mejs.slovak": "Slovak", "mejs.slovenian": "Slovenian", "mejs.spanish": "Spanish", "mejs.swahili": "Swahili", "mejs.swedish": "Swedish", "mejs.tagalog": "Tagalog", "mejs.thai": "Thai", "mejs.turkish": "Turkish", "mejs.ukrainian": "Ukrainian", "mejs.vietnamese": "Vietnamese", "mejs.welsh": "Welsh", "mejs.yiddish": "Yiddish" } }; </script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-includes/js/mediaelement/mediaelement-and-player.min.js"
+                                            id="mediaelement-core-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-includes/js/mediaelement/mediaelement-migrate.min.js"
+                                            id="mediaelement-migrate-js"></script>
+                                        <script
+                                            id="mediaelement-js-extra"> var _wpmejsSettings = { "pluginPath": "\/online-course\/wp-includes\/js\/mediaelement\/", "classPrefix": "mejs-", "stretching": "responsive", "audioShortcodeLibrary": "mediaelement", "videoShortcodeLibrary": "mediaelement" }; </script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-includes/js/mediaelement/wp-mediaelement.min.js"
+                                            id="wp-mediaelement-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js"
+                                            id="elementor-webpack-runtime-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"
+                                            id="elementor-frontend-modules-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"
+                                            id="elementor-waypoints-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-includes/js/jquery/ui/core.min.js"
+                                            id="jquery-ui-core-js"></script>
+                                        <script
+                                            id="elementor-frontend-js-before"> var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.21.1", "is_static": false, "experimentalFeatures": { "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "additional_custom_breakpoints": true, "container": true, "e_swiper_latest": true, "container_grid": true, "home_screen": true, "ai-layout": true, "landing-pages": true }, "urls": { "assets": "https:\/\/landpress.keydesign.xyz\/online-course\/wp-content\/plugins\/elementor\/assets\/" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 9, "title": "Online%20Course%20%E2%80%93%20Marketing%20Landing%20Page%20Elementor%20WordPress%20Theme", "excerpt": "", "featuredImage": false } }; </script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementor/assets/js/frontend.min.js"
+                                            id="elementor-frontend-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js"
+                                            id="animate-circle-js"></script>
+                                        <script
+                                            id="elementskit-elementor-js-extra"> var ekit_config = { "ajaxurl": "https:\/\/landpress.keydesign.xyz\/online-course\/wp-admin\/admin-ajax.php", "nonce": "d3fa3d1da7" }; </script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js"
+                                            id="elementskit-elementor-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementskit/widgets/init/assets/js/elementor.js"
+                                            id="elementskit-elementor-pro-js"></script>
+                                        <script defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementskit/modules/sticky-content/assets/js/elementskit-sticky-content.js"
+                                            id="elementskit-sticky-content-script-init-defer-js"></script>
+                                        <script defer
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementskit/modules/parallax/assets/js/parallax-admin-scripts.js"
+                                            id="elementskit-parallax-admin-defer-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementskit/modules/wrapper-link/assets/js/wrapper.js"
+                                            id="elementskit-wrapper-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementskit/modules/mouse-cursor/assets/js/cotton.min.js"
+                                            id="cotton-js"></script>
+                                        <script
+                                            src="https://landpress.keydesign.xyz/online-course/wp-content/plugins/elementskit/modules/mouse-cursor/assets/js/mouse-cursor-scripts.js"
+                                            id="mouse-cursor-js"></script>
 </body>
 
 </html>
