@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Course &#8211; Marketing Landing Page Elementor WordPress Theme</title>
+    <title>Community Partners</title>
     <link rel="preconnect" href="../../fonts.gstatic.com/index.html" crossorigin />
     <link rel="preconnect" href="../../fonts.googleapis.com/index.html" />
     <style type="text/css">
@@ -305,12 +305,14 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-B2L7RHR7YW'); </script>
-    
+
     <style>
         @media (max-width: 768px) {
             iframe {
-                width: 100%; /* Ocupar todo el ancho disponible */
-                height: 350px; /* Ajustar a una altura menor */
+                width: 100%;
+                /* Ocupar todo el ancho disponible */
+                height: 350px;
+                /* Ajustar a una altura menor */
             }
         }
 
@@ -322,7 +324,8 @@
         /* Estilos para pantallas móviles */
         @media (max-width: 768px) {
             .youtube-video {
-                height: 350px; /* Reduce la altura para dispositivos móviles */
+                height: 350px;
+                /* Reduce la altura para dispositivos móviles */
             }
         }
     </style>
@@ -364,7 +367,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="elementor-element elementor-element-212430ff e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child"
                                             data-id="212430ff" data-element_type="container">
                                             <div class="elementor-element elementor-element-1fbba71 elementor-widget elementor-widget-elementskit-button"
@@ -373,13 +376,19 @@
                                                 data-widget_type="elementskit-button.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="ekit-wid-con">
-                                                        <div class="ekit-btn-wraper"> <a href="#content"
+                                                        <div class="ekit-btn-wraper"> <a href="#schedule-sect"
                                                                 class="elementskit-btn gradient-bg whitespace--normal"
-                                                                id=""> Ver video </a></div>
+                                                                id="">¡Quiero un Partner!</a></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <script>
+                                            document.querySelector('a[href="#video-frame"]').addEventListener('click', function (event) {
+                                                event.preventDefault();
+                                                document.querySelector('#video-frame').scrollIntoView({ behavior: 'smooth' });
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -444,23 +453,26 @@
                                                                 <br>
                                                                 <br>
                                                                 <br>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                        
+
 
                                             <div style="margin: 5px; margin-left: 20px; margin-right: 20px;">
-    <iframe src="https://www.youtube.com/embed/Dl2k8qJUmxA?si=SYEeVI52hjtpvTMu" 
-        title="YouTube video player" frameborder="0"
-        class="youtube-video" <!-- Clase específica -->
-        style="height: 750px; width: 1000; "
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-    </iframe>
-</div>
+                                                <iframe
+                                                    src="https://www.youtube.com/embed/Dl2k8qJUmxA?si=SYEeVI52hjtpvTMu"
+                                                    title="YouTube video player" frameborder="0" class="youtube-video"
+                                                    <!-- Clase específica -->
+                                                    style="height: 750px; width: 1000; "
+                                                    id="video-frame"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                                                    gyroscope; picture-in-picture; web-share"
+                                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                                </iframe>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -486,10 +498,11 @@
                                                     <div class="ekit-wid-con">
                                                         <div
                                                             class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-text_left">
-                                                            
+
                                                             <h2 class="ekit-heading--title elementskit-section-title ">
                                                                 Cónoce qué es un <span
-                                                                    style="color: linear-gradient(90deg, #37e3ff, #9f4bff); background: linear-gradient(90deg, #37e3ff, #9f4bff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">"Partner"</span></h2>
+                                                                    style="color: linear-gradient(90deg, #37e3ff, #9f4bff); background: linear-gradient(90deg, #37e3ff, #9f4bff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">"Partner"</span>
+                                                            </h2>
                                                             <div class='ekit-heading__description'>
                                                                 <p>Ideal para creadores de contenido que <span
                                                                         style="text-decoration: underline;">no
@@ -498,7 +511,8 @@
                                                                         style="text-decoration: underline;">sus marcas
                                                                         personales
                                                                         y productos digitales</span> a una <span
-                                                                        style="text-decoration: underline;">facturar de 1-3k USD -> +10K USD
+                                                                        style="text-decoration: underline;">facturar de
+                                                                        1-3k USD -> +10K USD
                                                                         mes tras mes.</span></p>
                                                             </div>
                                                             <br>
@@ -506,7 +520,7 @@
                                                             <br>
                                                             <br>
 
-                                                           
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -521,8 +535,7 @@
                                                                 <input type="submit"
                                                                     onclick="location.href = '#schedule-sect'"
                                                                     class="elementskit-btn gradient-bg whitespace--normal"
-                                                                    value="QUIERO ENTRAR AL PROGRAMA 'PARTNER'"
-                                                                    style="
+                                                                    value="QUIERO ENTRAR AL PROGRAMA 'PARTNER'" style="
             width: 100%;
             height: 20%;
             transition: transform 0.2s ease-in-out;
@@ -537,8 +550,7 @@
                                                                 <input type="submit"
                                                                     onclick="location.href = 'index2.html'"
                                                                     class="elementskit-btn gradient-bg whitespace--normal"
-                                                                    value="UNIRME AL CÍRCULO DE CREADORES"
-                                                                    style="
+                                                                    value="UNIRME AL CÍRCULO DE CREADORES" style="
             width: 100%;
             height: 100%;
             transition: transform 0.2s ease-in-out;
@@ -579,7 +591,9 @@
                                 style="color: linear-gradient(90deg, #37e3ff, #9f4bff); background: linear-gradient(90deg, #37e3ff, #9f4bff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">conmigo</span>
                         </h2>
                         <div class='ekit-heading__description'>
-                            <p style="color: white;">Queremos conocerte mejor, agenda una llamada conmigo para conocer si calificas en el programa <b style="color: whitesmoke;">Master Partner</b> <br><b style="color: white;">Es 100% GRATIS</b>
+                            <p style="color: white;">Queremos conocerte mejor, agenda una llamada conmigo para conocer
+                                si calificas en el programa <b style="color: whitesmoke;">Master Partner</b> <br><b
+                                    style="color: white;">Es 100% GRATIS</b>
 
                             </p>
                         </div>
@@ -606,8 +620,8 @@
     <footer id="site-footer" class="site-footer footer-position-default" role="contentinfo">
         <div class="ekit-template-content-markup ekit-template-content-footer ekit-template-content-theme-support">
             <div data-elementor-type="wp-post" data-elementor-id="23748" class="elementor elementor-23748">
-                
-                
+
+
 
                 <div class="elementor-element elementor-element-5f03e06 e-con-full e-flex e-con e-parent"
                     data-id="5f03e06" data-element_type="container"
